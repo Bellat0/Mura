@@ -111,7 +111,7 @@ class RandomMaqalCell: UITableViewCell {
     @objc func refreshButtonAction() {
         let randomThemeIndex = Int.random(in: 0..<maqalDatabase.count)
         let randomMaqalIndex = Int.random(in: 0..<maqalDatabase[0].maqals.count)
-
+        
         configureCell(data: maqalDatabase[randomThemeIndex].maqals[randomMaqalIndex])
     }
 

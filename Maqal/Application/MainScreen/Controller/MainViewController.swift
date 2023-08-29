@@ -32,6 +32,7 @@ class MainViewController: UIViewController {
 
     private func setupViews() {
         view.addSubview(searchBar)
+        searchBar.delegate = self
         searchBar.searchBarStyle = .minimal
         searchBar.placeholder = "Поиск пословиц"
 
@@ -192,5 +193,15 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+}
+
+//MARK: - Search controller delegate
+
+extension MainViewController: UISearchBarDelegate {
+
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        let searchVC = SearchViewController()
+        navigationController?.pushViewController(searchVC, animated: true)
     }
 }

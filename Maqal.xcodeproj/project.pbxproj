@@ -26,6 +26,7 @@
 		945D83432A9DF101007DAB75 /* MaqalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D83422A9DF101007DAB75 /* MaqalViewController.swift */; };
 		945D83472A9DF1E2007DAB75 /* MaqalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D83462A9DF1E2007DAB75 /* MaqalCell.swift */; };
 		945D834A2A9DF27F007DAB75 /* MaqalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D83492A9DF27F007DAB75 /* MaqalModel.swift */; };
+		945D834E2A9E02C5007DAB75 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D834D2A9E02C5007DAB75 /* SearchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		945D83422A9DF101007DAB75 /* MaqalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaqalViewController.swift; sourceTree = "<group>"; };
 		945D83462A9DF1E2007DAB75 /* MaqalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaqalCell.swift; sourceTree = "<group>"; };
 		945D83492A9DF27F007DAB75 /* MaqalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaqalModel.swift; sourceTree = "<group>"; };
+		945D834D2A9E02C5007DAB75 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				945D830B2A9C8323007DAB75 /* MainViewController.swift */,
+				945D834D2A9E02C5007DAB75 /* SearchViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -114,7 +117,6 @@
 			isa = PBXGroup;
 			children = (
 				945D832A2A9C8C18007DAB75 /* HeaderSectionView.swift */,
-				945D83232A9C8A07007DAB75 /* CollectionView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -134,6 +136,7 @@
 		945D832C2A9C98D6007DAB75 /* MaqalThemes */ = {
 			isa = PBXGroup;
 			children = (
+				945D834B2A9E0281007DAB75 /* Controller */,
 				945D83302A9CA676007DAB75 /* Model */,
 				945D832F2A9CA672007DAB75 /* View */,
 			);
@@ -241,6 +244,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		945D834B2A9E0281007DAB75 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				945D83232A9C8A07007DAB75 /* CollectionView.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -328,6 +339,7 @@
 				945D83472A9DF1E2007DAB75 /* MaqalCell.swift in Sources */,
 				945D83432A9DF101007DAB75 /* MaqalViewController.swift in Sources */,
 				945D83402A9CD31F007DAB75 /* SupportView.swift in Sources */,
+				945D834E2A9E02C5007DAB75 /* SearchViewController.swift in Sources */,
 				945D83382A9CABC8007DAB75 /* RandomMaqalCell.swift in Sources */,
 				945D832E2A9C9BCE007DAB75 /* ThemesCollectionCell.swift in Sources */,
 				945D831F2A9C889D007DAB75 /* Constants.swift in Sources */,

@@ -28,6 +28,8 @@ class CollectionCell: UITableViewCell {
         return vc
     }()
 
+    var goToMaqalVC: ((IndexPath) -> Void)?
+
     //MARK: - Lyfe cycle
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -46,6 +48,7 @@ class CollectionCell: UITableViewCell {
 
     private func setupViews() {
         contentView.addSubview(collectionView)
+        collectionView.backgroundColor = Colors.LightGrayColor
         collectionView.showsHorizontalScrollIndicator = false
     }
 
@@ -79,10 +82,16 @@ extension CollectionCell: UICollectionViewDataSource, UICollectionViewDelegate {
             for: indexPath
         ) as? ThemesCollectionCell else { return UICollectionViewCell() }
 
-        let maqal = maqalDatabase[indexPath.row]
-        cell.configureCell(data: maqal)
+        let theme = maqalDatabase[indexPath.row]
+        cell.configureCell(data: theme)
 
         return cell
+    }
+
+    //MARK: - Collection view didSelectItemAt
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        goToMaqalVC?(indexPath)
     }
 }
 

@@ -14,9 +14,3 @@ struct Theme {
     let themeTranslate: String
     let maqals: [Maqal]
 }
-
-struct Maqal {
-    let title: String
-    let translate: String
-    var isFavourite: Bool
-}

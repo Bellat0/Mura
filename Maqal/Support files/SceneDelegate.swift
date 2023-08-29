@@ -20,7 +20,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
         window?.makeKeyAndVisible()
 
+        func createNavi() -> UINavigationController {
+            let mainVC = MainViewController()
+            mainVC.title = "Maqal"
 
+            return UINavigationController(rootViewController: mainVC)
+        }
+
+
+        window?.rootViewController = createNavi()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

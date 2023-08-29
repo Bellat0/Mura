@@ -15,15 +15,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1024Logo" translatesAutoresizingMaskIntoConstraints="NO" id="edW-8X-I0g">
-                                <rect key="frame" x="107" y="224" width="179" height="168"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Agayin" translatesAutoresizingMaskIntoConstraints="NO" id="AB6-2L-nF3">
+                                <rect key="frame" x="76.666666666666686" y="224" width="240" height="205"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="168" id="WhR-iE-oC9"/>
-                                    <constraint firstAttribute="width" constant="179" id="Z0Q-W9-LQL"/>
+                                    <constraint firstAttribute="height" constant="205" id="T9g-cg-LGU"/>
+                                    <constraint firstAttribute="width" constant="240" id="YLK-cB-6hb"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maqal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BIe-K0-LoO">
-                                <rect key="frame" x="146.66666666666666" y="408" width="99.666666666666657" height="42"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maqal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWy-5B-BoY">
+                                <rect key="frame" x="146.66666666666666" y="445" width="99.666666666666657" height="42"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="36"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -32,12 +32,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.18823529780000001" green="0.29803922770000002" blue="0.76470589639999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="BIe-K0-LoO" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="1c6-Rj-0gR"/>
-                            <constraint firstItem="BIe-K0-LoO" firstAttribute="top" secondItem="edW-8X-I0g" secondAttribute="bottom" constant="16" id="CHh-fF-7iq"/>
-                            <constraint firstItem="BIe-K0-LoO" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.253605" id="ZLx-xZ-cOp"/>
-                            <constraint firstItem="edW-8X-I0g" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="165" id="lUA-gJ-8Oc"/>
-                            <constraint firstItem="BIe-K0-LoO" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" multiplier="0.0492958" id="srN-1d-hZJ"/>
-                            <constraint firstItem="edW-8X-I0g" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="zFx-Tw-c2z"/>
+                            <constraint firstItem="eWy-5B-BoY" firstAttribute="top" secondItem="AB6-2L-nF3" secondAttribute="bottom" constant="16" id="C6F-bo-ciD"/>
+                            <constraint firstItem="AB6-2L-nF3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="165" id="Szr-5b-2DS"/>
+                            <constraint firstItem="eWy-5B-BoY" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="gNw-Dx-dbN"/>
+                            <constraint firstItem="AB6-2L-nF3" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="u5f-Pi-0C2"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -47,6 +45,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="1024Logo" width="1024" height="1024"/>
+        <image name="Agayin" width="822" height="830"/>
     </resources>
 </document>

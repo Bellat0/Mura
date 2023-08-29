@@ -11,9 +11,12 @@ class SupportCell: UITableViewCell {
 
     static let ID = "SupportCell"
 
+    var goToNextVC: (() -> Void)?
+
     //MARK: - Private properties
 
-    private let rectView = UIView()
+    private let rectImageView = UIImageView()
+    private let button = UIButton()
     private let titleLabel = UILabel()
 
     //MARK: - Lyfe cycle
@@ -21,7 +24,7 @@ class SupportCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
 
-        backgroundColor = .red
+        contentView.backgroundColor = Colors.LightGrayColor
 
         setupViews()
         setupConstraints()
@@ -34,9 +37,13 @@ class SupportCell: UITableViewCell {
     //MARK: - Private methods
 
     private func setupViews() {
-        contentView.addSubview(rectView)
-        rectView.layer.cornerRadius = 16
-        rectView.backgroundColor = Colors.BlueColor
+        contentView.addSubview(rectImageView)
+        rectImageView.image = UIImage(named: "buttonGradient")
+        rectImageView.layer.cornerRadius = 16
+        rectImageView.clipsToBounds = true
+
+        contentView.addSubview(button)
+        button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
 
         contentView.addSubview(titleLabel)
         titleLabel.textColor = .white
@@ -47,17 +54,27 @@ class SupportCell: UITableViewCell {
     }
 
     private func setupConstraints() {
-        rectView.snp.makeConstraints { make in
+        rectImageView.snp.makeConstraints { make in
             make.leading.equalToSuperview().offset(16)
-            make.top.equalToSuperview().offset(20)
             make.trailing.equalToSuperview().offset(-16)
         }
 
-        titleLabel.snp.makeConstraints { make in
-            make.top.equalTo(rectView).offset(16)
-            make.bottom.equalTo(rectView).offset(-16)
-            make.leading.equalTo(rectView).offset(16)
-            make.trailing.equalTo(rectView).offset(-16)
+        button.snp.makeConstraints { make in
+            make.edges.equalTo(rectImageView)
         }
+
+        titleLabel.snp.makeConstraints { make in
+            make.top.equalTo(rectImageView).offset(16)
+            make.bottom.equalTo(rectImageView).offset(-16)
+            make.leading.equalTo(rectImageView).offset(16)
+            make.trailing.equalTo(rectImageView).offset(-16)
+        }
+    }
+
+
+    //MARK: - Actions
+    
+    @objc func buttonAction() {
+        goToNextVC?()
     }
 }

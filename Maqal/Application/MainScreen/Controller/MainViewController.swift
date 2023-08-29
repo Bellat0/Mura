@@ -96,6 +96,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
             ) as? CollectionCell else { return UITableViewCell() }
 
             cell.goToMaqalVC = { [weak self] indexPath in
+                
                 let maqal = maqalDatabase[indexPath.row]
                 let maqalVC = MaqalViewController(maqal: maqal, title: maqal.title)
                 self?.navigationController?.pushViewController(maqalVC, animated: true)

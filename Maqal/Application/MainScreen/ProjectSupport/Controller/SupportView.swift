@@ -95,10 +95,12 @@ class SupportView: UIViewController {
     @objc func buttonAction() {
         UIView.animate(withDuration: 0.1, animations: {
             self.rectImageView.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
+            self.titleLabelButton.textColor = .systemGray6
         }) { (_) in
 
             UIView.animate(withDuration: 0.1) {
                 self.rectImageView.transform = CGAffineTransform.identity
+//                self.titleLabelButton.textColor = .white
             }
         }
 

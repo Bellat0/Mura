@@ -31,6 +31,8 @@ class MaqalViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        view.backgroundColor = Colors.LightGrayColor
+
         title = titleHeader
 
         setupViews()
@@ -78,6 +80,10 @@ extension MaqalViewController: UITableViewDelegate, UITableViewDataSource {
         cell.configureCell(data: maqal)
 
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 
     //MARK: - Swipes

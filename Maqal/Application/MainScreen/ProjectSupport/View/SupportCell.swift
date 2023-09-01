@@ -16,8 +16,7 @@ class SupportCell: UITableViewCell {
     //MARK: - Private properties
 
     private let rectImageView = UIImageView()
-    private let button = UIButton()
-    private let titleLabel = UILabel()
+    private let button = UIButton(type: .system)
 
     //MARK: - Lyfe cycle
 
@@ -43,14 +42,10 @@ class SupportCell: UITableViewCell {
         rectImageView.clipsToBounds = true
 
         contentView.addSubview(button)
-        button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-
-        contentView.addSubview(titleLabel)
-        titleLabel.textColor = .white
-        titleLabel.font = UIFont.systemFont(ofSize: 18, weight: .medium)
-        titleLabel.numberOfLines = 0
-        titleLabel.text = "Поддержать проект"
-        titleLabel.textAlignment = .center
+        button.setTitle("О проекте", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .medium)
+        button.addTarget(self, action: #selector(aboutProjectAction), for: .touchUpInside)
     }
 
     private func setupConstraints() {
@@ -62,19 +57,11 @@ class SupportCell: UITableViewCell {
         button.snp.makeConstraints { make in
             make.edges.equalTo(rectImageView)
         }
-
-        titleLabel.snp.makeConstraints { make in
-            make.top.equalTo(rectImageView).offset(16)
-            make.bottom.equalTo(rectImageView).offset(-16)
-            make.leading.equalTo(rectImageView).offset(16)
-            make.trailing.equalTo(rectImageView).offset(-16)
-        }
     }
-
 
     //MARK: - Actions
     
-    @objc func buttonAction() {
+    @objc func aboutProjectAction() {
         goToNextVC?()
     }
 }

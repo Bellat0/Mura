@@ -125,8 +125,8 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
             cell.selectionStyle = .none
 
             cell.goToNextVC = { [weak self] in
-                let supportVC = SupportView()
-                self?.present(supportVC, animated: true)
+                let aboutUsVC = AboutUsController()
+                self?.present(aboutUsVC, animated: true)
             }
 
             return cell

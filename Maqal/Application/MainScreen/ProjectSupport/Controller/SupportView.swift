@@ -14,8 +14,7 @@ class SupportView: UIViewController {
     private let titleLabel = UILabel()
     private let descriptionLabel = UILabel()
     private let rectImageView = UIImageView()
-    private let button = UIButton(type: .system)
-    private let titleLabelButton = UILabel()
+    private let button = UIButton()
 
     //MARK: - Lyfe cycle
 
@@ -48,13 +47,9 @@ class SupportView: UIViewController {
 
         view.addSubview(button)
         button.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-
-        view.addSubview(titleLabelButton)
-        titleLabelButton.textColor = .white
-        titleLabelButton.font = UIFont.systemFont(ofSize: 18, weight: .medium)
-        titleLabelButton.numberOfLines = 0
-        titleLabelButton.text = "Скопировать номер"
-        titleLabelButton.textAlignment = .center
+        button.setTitle("Скопировать номер", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 18, weight: .medium)
 
     }
 
@@ -81,13 +76,6 @@ class SupportView: UIViewController {
         button.snp.makeConstraints { make in
             make.edges.equalTo(rectImageView)
         }
-
-        titleLabelButton.snp.makeConstraints { make in
-            make.top.equalTo(rectImageView).offset(16)
-            make.bottom.equalTo(rectImageView).offset(-16)
-            make.leading.equalTo(rectImageView).offset(16)
-            make.trailing.equalTo(rectImageView).offset(-16)
-        }
     }
 
     //MARK: - Actions
@@ -95,18 +83,16 @@ class SupportView: UIViewController {
     @objc func buttonAction() {
         UIView.animate(withDuration: 0.1, animations: {
             self.rectImageView.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
-            self.titleLabelButton.textColor = .systemGray6
+            self.button.setTitleColor(.systemGray5, for: .normal)
         }) { (_) in
 
             UIView.animate(withDuration: 0.1) {
                 self.rectImageView.transform = CGAffineTransform.identity
-//                self.titleLabelButton.textColor = .white
+                self.button.setTitle("Номер скопирован", for: .normal)
             }
         }
 
         UIPasteboard.general.string = "+7 701 268 03 14"
-        self.titleLabelButton.text = "Номер скопирован"
-
         button.isEnabled = false
     }
 }

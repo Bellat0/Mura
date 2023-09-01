@@ -27,6 +27,7 @@
 		945D83472A9DF1E2007DAB75 /* MaqalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D83462A9DF1E2007DAB75 /* MaqalCell.swift */; };
 		945D834A2A9DF27F007DAB75 /* MaqalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D83492A9DF27F007DAB75 /* MaqalModel.swift */; };
 		945D834E2A9E02C5007DAB75 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D834D2A9E02C5007DAB75 /* SearchViewController.swift */; };
+		946F6E232AA1E0A8002A5AB3 /* AboutUsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946F6E222AA1E0A8002A5AB3 /* AboutUsController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		945D83462A9DF1E2007DAB75 /* MaqalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaqalCell.swift; sourceTree = "<group>"; };
 		945D83492A9DF27F007DAB75 /* MaqalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaqalModel.swift; sourceTree = "<group>"; };
 		945D834D2A9E02C5007DAB75 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		946F6E222AA1E0A8002A5AB3 /* AboutUsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				945D833F2A9CD31F007DAB75 /* SupportView.swift */,
+				946F6E222AA1E0A8002A5AB3 /* AboutUsController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 				945D83402A9CD31F007DAB75 /* SupportView.swift in Sources */,
 				945D834E2A9E02C5007DAB75 /* SearchViewController.swift in Sources */,
 				945D83382A9CABC8007DAB75 /* RandomMaqalCell.swift in Sources */,
+				946F6E232AA1E0A8002A5AB3 /* AboutUsController.swift in Sources */,
 				945D832E2A9C9BCE007DAB75 /* ThemesCollectionCell.swift in Sources */,
 				945D831F2A9C889D007DAB75 /* Constants.swift in Sources */,
 				945D83252A9C8A07007DAB75 /* CollectionView.swift in Sources */,
@@ -497,7 +501,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = MaximTvilinev.Maqal;
+				PRODUCT_BUNDLE_IDENTIFIER = maqal.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -526,7 +530,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = MaximTvilinev.Maqal;
+				PRODUCT_BUNDLE_IDENTIFIER = maqal.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

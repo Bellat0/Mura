@@ -21,13 +21,10 @@
 		945D83322A9CA688007DAB75 /* ThemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D83312A9CA688007DAB75 /* ThemeModel.swift */; };
 		945D83352A9CA7BE007DAB75 /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D83342A9CA7BE007DAB75 /* DataBase.swift */; };
 		945D83382A9CABC8007DAB75 /* RandomMaqalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D83372A9CABC8007DAB75 /* RandomMaqalCell.swift */; };
-		945D833C2A9CBB57007DAB75 /* SupportCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D833B2A9CBB57007DAB75 /* SupportCell.swift */; };
-		945D83402A9CD31F007DAB75 /* SupportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D833F2A9CD31F007DAB75 /* SupportView.swift */; };
 		945D83432A9DF101007DAB75 /* MaqalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D83422A9DF101007DAB75 /* MaqalViewController.swift */; };
 		945D83472A9DF1E2007DAB75 /* MaqalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D83462A9DF1E2007DAB75 /* MaqalCell.swift */; };
 		945D834A2A9DF27F007DAB75 /* MaqalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D83492A9DF27F007DAB75 /* MaqalModel.swift */; };
 		945D834E2A9E02C5007DAB75 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D834D2A9E02C5007DAB75 /* SearchViewController.swift */; };
-		946F6E232AA1E0A8002A5AB3 /* AboutUsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946F6E222AA1E0A8002A5AB3 /* AboutUsController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,13 +43,10 @@
 		945D83312A9CA688007DAB75 /* ThemeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeModel.swift; sourceTree = "<group>"; };
 		945D83342A9CA7BE007DAB75 /* DataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBase.swift; sourceTree = "<group>"; };
 		945D83372A9CABC8007DAB75 /* RandomMaqalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomMaqalCell.swift; sourceTree = "<group>"; };
-		945D833B2A9CBB57007DAB75 /* SupportCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportCell.swift; sourceTree = "<group>"; };
-		945D833F2A9CD31F007DAB75 /* SupportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportView.swift; sourceTree = "<group>"; };
 		945D83422A9DF101007DAB75 /* MaqalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaqalViewController.swift; sourceTree = "<group>"; };
 		945D83462A9DF1E2007DAB75 /* MaqalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaqalCell.swift; sourceTree = "<group>"; };
 		945D83492A9DF27F007DAB75 /* MaqalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaqalModel.swift; sourceTree = "<group>"; };
 		945D834D2A9E02C5007DAB75 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		946F6E222AA1E0A8002A5AB3 /* AboutUsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,27 +184,8 @@
 		945D833A2A9CBB18007DAB75 /* ProjectSupport */ = {
 			isa = PBXGroup;
 			children = (
-				945D833D2A9CBCA3007DAB75 /* View */,
-				945D833E2A9CD303007DAB75 /* Controller */,
 			);
 			path = ProjectSupport;
-			sourceTree = "<group>";
-		};
-		945D833D2A9CBCA3007DAB75 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				945D833B2A9CBB57007DAB75 /* SupportCell.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		945D833E2A9CD303007DAB75 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				945D833F2A9CD31F007DAB75 /* SupportView.swift */,
-				946F6E222AA1E0A8002A5AB3 /* AboutUsController.swift */,
-			);
-			path = Controller;
 			sourceTree = "<group>";
 		};
 		945D83412A9DEBB8007DAB75 /* MaqalTableView */ = {
@@ -333,7 +308,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				945D830C2A9C8323007DAB75 /* MainViewController.swift in Sources */,
-				945D833C2A9CBB57007DAB75 /* SupportCell.swift in Sources */,
 				945D83082A9C8323007DAB75 /* AppDelegate.swift in Sources */,
 				945D830A2A9C8323007DAB75 /* SceneDelegate.swift in Sources */,
 				945D834A2A9DF27F007DAB75 /* MaqalModel.swift in Sources */,
@@ -341,10 +315,8 @@
 				945D83352A9CA7BE007DAB75 /* DataBase.swift in Sources */,
 				945D83472A9DF1E2007DAB75 /* MaqalCell.swift in Sources */,
 				945D83432A9DF101007DAB75 /* MaqalViewController.swift in Sources */,
-				945D83402A9CD31F007DAB75 /* SupportView.swift in Sources */,
 				945D834E2A9E02C5007DAB75 /* SearchViewController.swift in Sources */,
 				945D83382A9CABC8007DAB75 /* RandomMaqalCell.swift in Sources */,
-				946F6E232AA1E0A8002A5AB3 /* AboutUsController.swift in Sources */,
 				945D832E2A9C9BCE007DAB75 /* ThemesCollectionCell.swift in Sources */,
 				945D831F2A9C889D007DAB75 /* Constants.swift in Sources */,
 				945D83252A9C8A07007DAB75 /* CollectionView.swift in Sources */,
@@ -503,9 +475,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = maqal.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -532,9 +507,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = maqal.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

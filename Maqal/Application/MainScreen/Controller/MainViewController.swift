@@ -70,10 +70,6 @@ class MainViewController: UIViewController {
         tableView.register(
             RandomMaqalCell.self,
             forCellReuseIdentifier: RandomMaqalCell.ID)
-
-        tableView.register(
-            SupportCell.self,
-            forCellReuseIdentifier: SupportCell.ID)
     }
 }
 
@@ -81,7 +77,7 @@ class MainViewController: UIViewController {
 
 extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return 2
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -116,20 +112,6 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
 
             return cell
 
-        } else if indexPath.section == 2 {
-            guard let cell = tableView.dequeueReusableCell(
-                withIdentifier: SupportCell.ID,
-                for: indexPath
-            ) as? SupportCell else { return UITableViewCell() }
-
-            cell.selectionStyle = .none
-
-            cell.goToNextVC = { [weak self] in
-                let aboutUsVC = AboutUsController()
-                self?.present(aboutUsVC, animated: true)
-            }
-
-            return cell
         }
 
         return UITableViewCell()

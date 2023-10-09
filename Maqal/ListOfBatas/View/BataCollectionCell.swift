@@ -1,15 +1,15 @@
 //
-//  ThemesCell.swift
+//  BataCollectionCell.swift
 //  Maqal
 //
-//  Created by Maxim Tvilinev on 28.08.2023.
+//  Created by Maxim Tvilinev on 02.10.2023.
 //
 
 import UIKit
 
-class ThemesCollectionCell: UICollectionViewCell {
-
-    static let ID = "ThemesCollectionCell"
+class BataCollectionCell: UICollectionViewCell {
+    
+    static let ID = "BataCollectionCell"
 
     //MARK: - Private properties
 
@@ -22,7 +22,7 @@ class ThemesCollectionCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
 
-        contentView.backgroundColor = Colors.BlueColor
+        contentView.backgroundColor = Colors.PurpleColor
 
         setupViews()
         setupConstraints()
@@ -35,28 +35,28 @@ class ThemesCollectionCell: UICollectionViewCell {
     //MARK: - Private methods
 
     private func setupViews() {
-        contentView.layer.cornerRadius = 20
+        contentView.layer.cornerRadius = 25
 
         contentView.addSubview(imageView)
 
         contentView.addSubview(titleLabel)
         titleLabel.textColor = .white
-        titleLabel.font = UIFont.systemFont(ofSize: 20, weight: .medium)
+        titleLabel.font = UIFont.systemFont(ofSize: 16, weight: .medium)
 
         contentView.addSubview(descriptionLabel)
         descriptionLabel.textColor = Colors.LightGrayColor
-        descriptionLabel.font = UIFont.systemFont(ofSize: 18, weight: .medium)
+        descriptionLabel.font = UIFont.systemFont(ofSize: 14, weight: .regular)
     }
 
     private func setupConstraints() {
         imageView.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(22)
             make.centerX.equalToSuperview()
-            make.width.height.equalTo(128)
+            make.width.height.equalTo(80)
         }
 
         titleLabel.snp.makeConstraints { make in
-            make.top.equalTo(imageView.snp.bottom).offset(14)
+            make.top.equalTo(imageView.snp.bottom).offset(12)
             make.centerX.equalToSuperview()
         }
 

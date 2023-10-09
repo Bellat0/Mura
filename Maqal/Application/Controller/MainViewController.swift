@@ -14,14 +14,16 @@ class MainViewController: UIViewController {
 
     private let searchBar = UISearchBar()
     private let tableView = UITableView()
+    private let titleImageView = UIImageView()
 
     //MARK: - Lyfe cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = Colors.LightGrayColor
-        tableView.backgroundColor = Colors.LightGrayColor
+        view.backgroundColor = .white
+        tableView.backgroundColor = .white
+        navigationItem.titleView = titleImageView
 
         setupViews()
         setupConstrints()
@@ -31,10 +33,14 @@ class MainViewController: UIViewController {
     //MARK: - Private methods
 
     private func setupViews() {
+        view.addSubview(titleImageView)
+        titleImageView.image = UIImage(named: "Logo2")
+        titleImageView.contentMode = .scaleAspectFill
+
         view.addSubview(searchBar)
         searchBar.delegate = self
         searchBar.searchBarStyle = .minimal
-        searchBar.placeholder = "Поиск пословиц"
+        searchBar.placeholder = "Поиск"
 
         view.addSubview(tableView)
         tableView.separatorStyle = .none
@@ -44,14 +50,18 @@ class MainViewController: UIViewController {
     private func setupConstrints() {
         searchBar.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide)
-            make.leading.equalToSuperview().offset(16)
-            make.trailing.equalToSuperview().offset(-16)
+            make.leading.equalToSuperview().offset(8)
+            make.trailing.equalToSuperview().offset(-8)
         }
 
         tableView.snp.makeConstraints { make in
             make.top.equalTo(searchBar.snp.bottom)
             make.leading.trailing.equalToSuperview()
             make.bottom.equalToSuperview()
+        }
+
+        titleImageView.snp.makeConstraints { make in
+            make.size.equalTo(24)
         }
     }
 
@@ -60,16 +70,16 @@ class MainViewController: UIViewController {
         tableView.dataSource = self
 
         tableView.register(
-            HeaderSectionView.self,
-            forHeaderFooterViewReuseIdentifier: HeaderSectionView.ID)
+            TableViewHeaderSection.self,
+            forHeaderFooterViewReuseIdentifier: TableViewHeaderSection.ID)
 
         tableView.register(
-            CollectionCell.self,
-            forCellReuseIdentifier: CollectionCell.ID)
+            MaqalCollectionCell.self,
+            forCellReuseIdentifier: MaqalCollectionCell.ID)
 
         tableView.register(
-            RandomMaqalCell.self,
-            forCellReuseIdentifier: RandomMaqalCell.ID)
+            BataCollectionView.self,
+            forCellReuseIdentifier: BataCollectionView.ID)
     }
 }
 
@@ -87,9 +97,9 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
             guard let cell = tableView.dequeueReusableCell(
-                withIdentifier: CollectionCell.ID,
+                withIdentifier: MaqalCollectionCell.ID,
                 for: indexPath
-            ) as? CollectionCell else { return UITableViewCell() }
+            ) as? MaqalCollectionCell else { return UITableViewCell() }
 
             cell.goToMaqalVC = { [weak self] indexPath in
                 
@@ -97,21 +107,21 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
                 let maqalVC = MaqalViewController(maqal: maqal, title: maqal.title)
                 self?.navigationController?.pushViewController(maqalVC, animated: true)
             }
+            
+            cell.selectionStyle = .none
 
             return cell
 
         } else if indexPath.section == 1 {
             guard let cell = tableView.dequeueReusableCell(
-                withIdentifier: RandomMaqalCell.ID,
+                withIdentifier: BataCollectionView.ID,
                 for: indexPath
-            ) as? RandomMaqalCell else { return UITableViewCell() }
+            ) as? BataCollectionView else { return UITableViewCell() }
 
             cell.selectionStyle = .none
 
-            cell.refreshButtonAction()
 
             return cell
-
         }
 
         return UITableViewCell()
@@ -121,14 +131,14 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         guard let headerView = tableView.dequeueReusableHeaderFooterView(
-            withIdentifier: HeaderSectionView.ID
-        ) as? HeaderSectionView else { return nil }
+            withIdentifier: TableViewHeaderSection.ID
+        ) as? TableViewHeaderSection else { return nil }
 
         switch section {
         case 0:
-            headerView.configureTitle(title: "Темы пословиц")
+            headerView.configureTitle(title: "Пословицы")
         case 1:
-            headerView.configureTitle(title: "Случайная пословица")
+            headerView.configureTitle(title: "Бата")
         case 2:
             return nil
         default:
@@ -141,35 +151,25 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 
         if indexPath.section == 0 {
-            return 270
+            return 450
 
         } else if indexPath.section == 1 {
-
-//            let maqalDataBase = maqalDatabase.first?.maqals[indexPath.row]
-//
-//            let constraintTitleSize = CGSize(width: view.frame.width - 64, height: CGFloat.greatestFiniteMagnitude)
-//
-//            let titleLabel = UILabel()
-//            titleLabel.font = UIFont.systemFont(ofSize: 18, weight: .medium)
-//            titleLabel.numberOfLines = 0
-//            titleLabel.text = maqalDataBase?.title
-//            let titleLabelSize = titleLabel.sizeThatFits(constraintTitleSize)
-//
-//            let descriptionLabel = UILabel()
-//            descriptionLabel.font = UIFont.systemFont(ofSize: 16, weight: .medium)
-//            descriptionLabel.numberOfLines = 0
-//            descriptionLabel.text = maqalDataBase?.translate
-//            let descriptionLabelSize = titleLabel.sizeThatFits(constraintTitleSize)
-//
-//            return 20 + 12 + 12 + titleLabelSize.height + descriptionLabelSize.width + 8
-
-            return 250
-
-        } else if indexPath.section == 2 {
-            return 60
+            return 270
         }
 
         return 0
+    }
+
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        switch section {
+        case 0:
+            return 30
+        case 1:
+            return 30
+
+        default:
+            return 10
+        }
     }
 
     //MARK: - Table view didSelectRowAt

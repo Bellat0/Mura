@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9445F6112ACADCF500428550 /* BataCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9445F6102ACADCF500428550 /* BataCollectionView.swift */; };
+		9445F6152ACAE1A900428550 /* BataCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9445F6142ACAE1A900428550 /* BataCollectionCell.swift */; };
 		945D83082A9C8323007DAB75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D83072A9C8323007DAB75 /* AppDelegate.swift */; };
 		945D830A2A9C8323007DAB75 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D83092A9C8323007DAB75 /* SceneDelegate.swift */; };
 		945D830C2A9C8323007DAB75 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D830B2A9C8323007DAB75 /* MainViewController.swift */; };
@@ -14,13 +16,12 @@
 		945D83142A9C8323007DAB75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 945D83122A9C8323007DAB75 /* LaunchScreen.storyboard */; };
 		945D831C2A9C832F007DAB75 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 945D831B2A9C832F007DAB75 /* .gitignore */; };
 		945D831F2A9C889D007DAB75 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D831E2A9C889D007DAB75 /* Constants.swift */; };
-		945D83252A9C8A07007DAB75 /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D83232A9C8A07007DAB75 /* CollectionView.swift */; };
+		945D83252A9C8A07007DAB75 /* MaqalCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D83232A9C8A07007DAB75 /* MaqalCollectionCell.swift */; };
 		945D83292A9C8A3F007DAB75 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 945D83282A9C8A3F007DAB75 /* SnapKit */; };
-		945D832B2A9C8C18007DAB75 /* HeaderSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D832A2A9C8C18007DAB75 /* HeaderSectionView.swift */; };
+		945D832B2A9C8C18007DAB75 /* TableViewHeaderSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D832A2A9C8C18007DAB75 /* TableViewHeaderSection.swift */; };
 		945D832E2A9C9BCE007DAB75 /* ThemesCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D832D2A9C9BCE007DAB75 /* ThemesCollectionCell.swift */; };
 		945D83322A9CA688007DAB75 /* ThemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D83312A9CA688007DAB75 /* ThemeModel.swift */; };
 		945D83352A9CA7BE007DAB75 /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D83342A9CA7BE007DAB75 /* DataBase.swift */; };
-		945D83382A9CABC8007DAB75 /* RandomMaqalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D83372A9CABC8007DAB75 /* RandomMaqalCell.swift */; };
 		945D83432A9DF101007DAB75 /* MaqalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D83422A9DF101007DAB75 /* MaqalViewController.swift */; };
 		945D83472A9DF1E2007DAB75 /* MaqalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D83462A9DF1E2007DAB75 /* MaqalCell.swift */; };
 		945D834A2A9DF27F007DAB75 /* MaqalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D83492A9DF27F007DAB75 /* MaqalModel.swift */; };
@@ -28,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9445F6102ACADCF500428550 /* BataCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BataCollectionView.swift; sourceTree = "<group>"; };
+		9445F6142ACAE1A900428550 /* BataCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BataCollectionCell.swift; sourceTree = "<group>"; };
 		945D83042A9C8323007DAB75 /* Maqal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Maqal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		945D83072A9C8323007DAB75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		945D83092A9C8323007DAB75 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,12 +40,11 @@
 		945D83152A9C8323007DAB75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		945D831B2A9C832F007DAB75 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		945D831E2A9C889D007DAB75 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		945D83232A9C8A07007DAB75 /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
-		945D832A2A9C8C18007DAB75 /* HeaderSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderSectionView.swift; sourceTree = "<group>"; };
+		945D83232A9C8A07007DAB75 /* MaqalCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaqalCollectionCell.swift; sourceTree = "<group>"; };
+		945D832A2A9C8C18007DAB75 /* TableViewHeaderSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewHeaderSection.swift; sourceTree = "<group>"; };
 		945D832D2A9C9BCE007DAB75 /* ThemesCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemesCollectionCell.swift; sourceTree = "<group>"; };
 		945D83312A9CA688007DAB75 /* ThemeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeModel.swift; sourceTree = "<group>"; };
 		945D83342A9CA7BE007DAB75 /* DataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBase.swift; sourceTree = "<group>"; };
-		945D83372A9CABC8007DAB75 /* RandomMaqalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomMaqalCell.swift; sourceTree = "<group>"; };
 		945D83422A9DF101007DAB75 /* MaqalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaqalViewController.swift; sourceTree = "<group>"; };
 		945D83462A9DF1E2007DAB75 /* MaqalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaqalCell.swift; sourceTree = "<group>"; };
 		945D83492A9DF27F007DAB75 /* MaqalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaqalModel.swift; sourceTree = "<group>"; };
@@ -61,6 +63,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9445F60E2ACADBB100428550 /* ListOfMaqals */ = {
+			isa = PBXGroup;
+			children = (
+				945D83302A9CA676007DAB75 /* Model */,
+				945D834B2A9E0281007DAB75 /* Controller */,
+				945D832F2A9CA672007DAB75 /* View */,
+			);
+			path = ListOfMaqals;
+			sourceTree = "<group>";
+		};
+		9445F60F2ACADCD700428550 /* ListOfBatas */ = {
+			isa = PBXGroup;
+			children = (
+				9445F6122ACAE10200428550 /* Controller */,
+				9445F6132ACAE11400428550 /* View */,
+			);
+			path = ListOfBatas;
+			sourceTree = "<group>";
+		};
+		9445F6122ACAE10200428550 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9445F6102ACADCF500428550 /* BataCollectionView.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9445F6132ACAE11400428550 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9445F6142ACAE1A900428550 /* BataCollectionCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		945D82FB2A9C8323007DAB75 = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +119,9 @@
 			isa = PBXGroup;
 			children = (
 				945D83332A9CA7AE007DAB75 /* Application */,
+				9445F60E2ACADBB100428550 /* ListOfMaqals */,
+				945D83412A9DEBB8007DAB75 /* DetailsMaqal */,
+				9445F60F2ACADCD700428550 /* ListOfBatas */,
 				945D831D2A9C866E007DAB75 /* Support files */,
 			);
 			path = Maqal;
@@ -112,31 +152,9 @@
 		945D83212A9C89C1007DAB75 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				945D832A2A9C8C18007DAB75 /* HeaderSectionView.swift */,
+				945D832A2A9C8C18007DAB75 /* TableViewHeaderSection.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		945D83222A9C89D2007DAB75 /* MainScreen */ = {
-			isa = PBXGroup;
-			children = (
-				945D83202A9C89B9007DAB75 /* Controller */,
-				945D83212A9C89C1007DAB75 /* View */,
-				945D832C2A9C98D6007DAB75 /* MaqalThemes */,
-				945D83362A9CABA6007DAB75 /* RandomMaqal */,
-				945D833A2A9CBB18007DAB75 /* ProjectSupport */,
-			);
-			path = MainScreen;
-			sourceTree = "<group>";
-		};
-		945D832C2A9C98D6007DAB75 /* MaqalThemes */ = {
-			isa = PBXGroup;
-			children = (
-				945D834B2A9E0281007DAB75 /* Controller */,
-				945D83302A9CA676007DAB75 /* Model */,
-				945D832F2A9CA672007DAB75 /* View */,
-			);
-			path = MaqalThemes;
 			sourceTree = "<group>";
 		};
 		945D832F2A9CA672007DAB75 /* View */ = {
@@ -159,43 +177,20 @@
 			isa = PBXGroup;
 			children = (
 				945D83342A9CA7BE007DAB75 /* DataBase.swift */,
-				945D83222A9C89D2007DAB75 /* MainScreen */,
-				945D83412A9DEBB8007DAB75 /* MaqalTableView */,
+				945D83202A9C89B9007DAB75 /* Controller */,
+				945D83212A9C89C1007DAB75 /* View */,
 			);
 			path = Application;
 			sourceTree = "<group>";
 		};
-		945D83362A9CABA6007DAB75 /* RandomMaqal */ = {
-			isa = PBXGroup;
-			children = (
-				945D83392A9CABE9007DAB75 /* View */,
-			);
-			path = RandomMaqal;
-			sourceTree = "<group>";
-		};
-		945D83392A9CABE9007DAB75 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				945D83372A9CABC8007DAB75 /* RandomMaqalCell.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		945D833A2A9CBB18007DAB75 /* ProjectSupport */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ProjectSupport;
-			sourceTree = "<group>";
-		};
-		945D83412A9DEBB8007DAB75 /* MaqalTableView */ = {
+		945D83412A9DEBB8007DAB75 /* DetailsMaqal */ = {
 			isa = PBXGroup;
 			children = (
 				945D83482A9DF275007DAB75 /* Model */,
 				945D83442A9DF1CA007DAB75 /* Controller */,
 				945D83452A9DF1D1007DAB75 /* View */,
 			);
-			path = MaqalTableView;
+			path = DetailsMaqal;
 			sourceTree = "<group>";
 		};
 		945D83442A9DF1CA007DAB75 /* Controller */ = {
@@ -225,7 +220,7 @@
 		945D834B2A9E0281007DAB75 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				945D83232A9C8A07007DAB75 /* CollectionView.swift */,
+				945D83232A9C8A07007DAB75 /* MaqalCollectionCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -261,7 +256,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					945D83032A9C8323007DAB75 = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -311,15 +306,16 @@
 				945D83082A9C8323007DAB75 /* AppDelegate.swift in Sources */,
 				945D830A2A9C8323007DAB75 /* SceneDelegate.swift in Sources */,
 				945D834A2A9DF27F007DAB75 /* MaqalModel.swift in Sources */,
-				945D832B2A9C8C18007DAB75 /* HeaderSectionView.swift in Sources */,
+				945D832B2A9C8C18007DAB75 /* TableViewHeaderSection.swift in Sources */,
+				9445F6112ACADCF500428550 /* BataCollectionView.swift in Sources */,
 				945D83352A9CA7BE007DAB75 /* DataBase.swift in Sources */,
 				945D83472A9DF1E2007DAB75 /* MaqalCell.swift in Sources */,
+				9445F6152ACAE1A900428550 /* BataCollectionCell.swift in Sources */,
 				945D83432A9DF101007DAB75 /* MaqalViewController.swift in Sources */,
 				945D834E2A9E02C5007DAB75 /* SearchViewController.swift in Sources */,
-				945D83382A9CABC8007DAB75 /* RandomMaqalCell.swift in Sources */,
 				945D832E2A9C9BCE007DAB75 /* ThemesCollectionCell.swift in Sources */,
 				945D831F2A9C889D007DAB75 /* Constants.swift in Sources */,
-				945D83252A9C8A07007DAB75 /* CollectionView.swift in Sources */,
+				945D83252A9C8A07007DAB75 /* MaqalCollectionCell.swift in Sources */,
 				945D83322A9CA688007DAB75 /* ThemeModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -374,6 +370,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -434,6 +431,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

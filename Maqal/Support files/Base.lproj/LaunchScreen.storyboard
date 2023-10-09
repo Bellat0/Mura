@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,25 +16,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maqal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWy-5B-BoY">
-                                <rect key="frame" x="130.33333333333337" y="490" width="132.66666666666663" height="56"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="48"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ClearLogo" translatesAutoresizingMaskIntoConstraints="NO" id="AB6-2L-nF3">
-                                <rect key="frame" x="71.666666666666686" y="224" width="250" height="250"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoBG" translatesAutoresizingMaskIntoConstraints="NO" id="AB6-2L-nF3">
+                                <rect key="frame" x="106.66666666666669" y="209" width="180" height="180"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="250" id="qDM-qV-yh1"/>
-                                    <constraint firstAttribute="width" constant="250" id="skv-b7-pi2"/>
+                                    <constraint firstAttribute="width" constant="180" id="VDG-eX-5TI"/>
+                                    <constraint firstAttribute="height" constant="180" id="Yu5-ix-Dy3"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Created by Maxim Tvilinev" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qDJ-Vq-J1g">
+                                <rect key="frame" x="106.66666666666669" y="783" width="180" height="19"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maqal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWy-5B-BoY">
+                                <rect key="frame" x="141.33333333333334" y="413" width="110.66666666666666" height="46.666666666666686"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="40"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.18823529780000001" green="0.29803922770000002" blue="0.76470589639999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="eWy-5B-BoY" firstAttribute="top" secondItem="AB6-2L-nF3" secondAttribute="bottom" constant="16" id="C6F-bo-ciD"/>
-                            <constraint firstItem="AB6-2L-nF3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="165" id="Szr-5b-2DS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qDJ-Vq-J1g" secondAttribute="bottom" constant="16" id="2s4-pF-ZbF"/>
+                            <constraint firstItem="AB6-2L-nF3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="7fT-nm-xWb"/>
+                            <constraint firstItem="eWy-5B-BoY" firstAttribute="top" secondItem="AB6-2L-nF3" secondAttribute="bottom" constant="24" id="7hG-ne-JhE"/>
+                            <constraint firstItem="qDJ-Vq-J1g" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Hh1-DD-oqF"/>
                             <constraint firstItem="eWy-5B-BoY" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="gNw-Dx-dbN"/>
                             <constraint firstItem="AB6-2L-nF3" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="u5f-Pi-0C2"/>
                         </constraints>
@@ -45,6 +54,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ClearLogo" width="1024" height="1024"/>
+        <image name="LogoBG" width="632" height="632"/>
     </resources>
 </document>

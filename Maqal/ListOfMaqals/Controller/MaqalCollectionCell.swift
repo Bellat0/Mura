@@ -7,18 +7,14 @@
 
 import UIKit
 
-class CollectionCell: UITableViewCell {
+class MaqalCollectionCell: UITableViewCell {
 
     static let ID = "CollectionCell"
 
-    //MARK: - Enum for collection view insets
-
-    enum Layout {
-        static let items: CGFloat = 2
-        static let insets = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
-    }
-
     //MARK: - Private properties
+
+    private let rectView = UIView()
+    private let titleLabel = UILabel()
 
     private let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -30,7 +26,7 @@ class CollectionCell: UITableViewCell {
 
     var goToMaqalVC: ((IndexPath) -> Void)?
 
-    //MARK: - Lyfe cycle
+    //MARK: - View lifecycle
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -47,15 +43,40 @@ class CollectionCell: UITableViewCell {
     //MARK: - Private methods
 
     private func setupViews() {
+        contentView.addSubview(rectView)
+        rectView.backgroundColor = Colors.GrayRectColor
+        rectView.layer.cornerRadius = 25
+
+        contentView.addSubview(titleLabel)
+        titleLabel.numberOfLines = 0
+        titleLabel.text = "Пословица - это короткое, звучное высказывание, содержащее мудрость, жизненный опыт или народную мораль"
+        titleLabel.textAlignment = .center
+        titleLabel.textColor = Colors.GrayColor
+        titleLabel.font = UIFont.systemFont(ofSize: 14)
+
         contentView.addSubview(collectionView)
-        collectionView.backgroundColor = Colors.LightGrayColor
-        collectionView.showsHorizontalScrollIndicator = false
+        collectionView.backgroundColor = .clear
     }
 
     private func setupConstraints() {
+        rectView.snp.makeConstraints { make in
+            make.top.equalTo(contentView).offset(8)
+            make.bottom.equalTo(contentView).offset(-8)
+            make.leading.equalTo(contentView).offset(8)
+            make.trailing.equalTo(contentView).offset(-8)
+        }
+
+        titleLabel.snp.makeConstraints { make in
+            make.top.equalTo(rectView).offset(16)
+            make.leading.equalTo(rectView).offset(8)
+            make.trailing.equalTo(rectView).offset(-8)
+        }
+
         collectionView.snp.makeConstraints { make in
-            make.edges.equalToSuperview()
-            make.height.equalTo(270)
+            make.top.equalTo(titleLabel.snp.bottom).offset(8)
+            make.bottom.equalTo(rectView)
+            make.leading.equalTo(rectView).offset(8)
+            make.trailing.equalTo(rectView)
         }
     }
 
@@ -71,7 +92,7 @@ class CollectionCell: UITableViewCell {
 
 //MARK: - Collection view data source
 
-extension CollectionCell: UICollectionViewDataSource, UICollectionViewDelegate {
+extension MaqalCollectionCell: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return maqalDatabase.count
     }
@@ -97,14 +118,14 @@ extension CollectionCell: UICollectionViewDataSource, UICollectionViewDelegate {
 
 //MARK: - UICollectionViewDelegateFlowLayout
 
-extension CollectionCell: UICollectionViewDelegateFlowLayout {
+extension MaqalCollectionCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 
-        let paddingWidth = 20 * (Layout.items + 1)
+        let paddingWidth = 8 * (Layout.maqalItems + 1)
         let availableWidth = collectionView.frame.width - paddingWidth
-        let itemWidth = availableWidth / Layout.items
+        let itemWidth = availableWidth / Layout.maqalItems
 
-        return CGSize(width: itemWidth, height: 230)
+        return CGSize(width: itemWidth + 8, height: 170)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
@@ -114,6 +135,11 @@ extension CollectionCell: UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
 
-        return Layout.insets.right - 4
+        return 1
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+
+        return 1
     }
 }

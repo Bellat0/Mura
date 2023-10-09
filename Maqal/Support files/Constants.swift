@@ -7,9 +7,25 @@
 
 import UIKit
 
+extension UIColor {
+    static func rgb(r: CGFloat, g: CGFloat, b: CGFloat) -> UIColor {
+        return UIColor(red: r/255, green: g/255, blue: b/255, alpha: 1)
+    }
+}
+
 enum Colors {
-    static let BlueColor = UIColor(red: 39/255, green: 77/255, blue: 203/255, alpha: 1)
-    static let GrayColor = UIColor(red: 90/255, green: 90/255, blue: 90/255, alpha: 1)
-    static let LightGrayColor = UIColor(red: 245/255, green: 245/255, blue: 245/255, alpha: 1)
-    static let DarkGrayColor = UIColor(red: 59/255, green: 59/255, blue: 59/255, alpha: 1)
+    static let BlueColor = UIColor.rgb(r: 39, g: 77, b: 203)
+    static let GrayRectColor = UIColor.rgb(r: 242, g: 243, b: 245)
+    static let GrayColor = UIColor.rgb(r: 90, g: 90, b: 90)
+    static let LightGrayColor = UIColor.rgb(r: 245, g: 245, b: 245)
+    static let DarkGrayColor = UIColor.rgb(r: 59, g: 59, b: 59)
+    static let PurpleColor = UIColor.rgb(r: 109, g: 69, b: 225)
+}
+
+//MARK: - Enum for collection view insets
+
+enum Layout {
+    static let maqalItems: CGFloat = 3
+    static let bataItems: CGFloat = 2
+    static let insets = UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 0)
 }

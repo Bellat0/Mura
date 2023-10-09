@@ -11,7 +11,7 @@ class MaqalViewController: UIViewController {
 
     //MARK: - Private properties
 
-    private let tableView = UITableView()
+    private let tableView = UITableView(frame: .zero, style: .grouped)
     private var maqal: Theme
     private var titleHeader: String
 

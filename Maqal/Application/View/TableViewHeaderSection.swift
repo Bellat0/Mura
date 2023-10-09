@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HeaderSectionView: UITableViewHeaderFooterView {
+class TableViewHeaderSection: UITableViewHeaderFooterView {
 
     static let ID = "HeaderSectionView"
 
@@ -20,7 +20,7 @@ class HeaderSectionView: UITableViewHeaderFooterView {
     override init(reuseIdentifier: String?) {
         super.init(reuseIdentifier: reuseIdentifier)
 
-        contentView.backgroundColor = Colors.LightGrayColor
+        contentView.backgroundColor = .white
 
         setupViews()
         setupConstraints()
@@ -40,7 +40,7 @@ class HeaderSectionView: UITableViewHeaderFooterView {
 
     private func setupConstraints() {
         titleLabel.snp.makeConstraints { make in
-            make.leading.equalToSuperview().offset(16)
+            make.centerX.equalToSuperview()
             make.bottom.equalToSuperview()
         }
     }

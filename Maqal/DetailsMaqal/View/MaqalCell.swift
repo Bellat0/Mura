@@ -46,16 +46,16 @@ class MaqalCell: UITableViewCell {
 
     private func setupConstraints() {
         titleLabel.snp.makeConstraints { make in
-            make.leading.equalToSuperview().offset(16)
             make.top.equalToSuperview().offset(8)
+            make.leading.equalToSuperview().offset(16)
             make.trailing.equalToSuperview().offset(-16)
         }
 
         descriptionLabel.snp.makeConstraints { make in
-            make.leading.equalToSuperview().offset(16)
             make.top.equalTo(titleLabel.snp.bottom).offset(4)
-            make.trailing.equalToSuperview().offset(-16)
             make.bottom.equalToSuperview().offset(-8)
+            make.leading.equalToSuperview().offset(16)
+            make.trailing.equalToSuperview().offset(-16)
         }
     }
 

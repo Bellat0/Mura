@@ -26,6 +26,8 @@
 		945D83472A9DF1E2007DAB75 /* MaqalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D83462A9DF1E2007DAB75 /* MaqalCell.swift */; };
 		945D834A2A9DF27F007DAB75 /* MaqalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D83492A9DF27F007DAB75 /* MaqalModel.swift */; };
 		945D834E2A9E02C5007DAB75 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D834D2A9E02C5007DAB75 /* SearchViewController.swift */; };
+		94988E062AD41BAF0012E783 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = 94988E052AD41BAF0012E783 /* GoogleMobileAds */; };
+		94988E0A2AD537220012E783 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94988E092AD537220012E783 /* Keys.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +51,7 @@
 		945D83462A9DF1E2007DAB75 /* MaqalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaqalCell.swift; sourceTree = "<group>"; };
 		945D83492A9DF27F007DAB75 /* MaqalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaqalModel.swift; sourceTree = "<group>"; };
 		945D834D2A9E02C5007DAB75 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		94988E092AD537220012E783 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94988E062AD41BAF0012E783 /* GoogleMobileAds in Frameworks */,
 				945D83292A9C8A3F007DAB75 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -63,14 +67,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9445F60E2ACADBB100428550 /* ListOfMaqals */ = {
+		9445F60E2ACADBB100428550 /* ListOfThemes */ = {
 			isa = PBXGroup;
 			children = (
 				945D83302A9CA676007DAB75 /* Model */,
 				945D834B2A9E0281007DAB75 /* Controller */,
 				945D832F2A9CA672007DAB75 /* View */,
 			);
-			path = ListOfMaqals;
+			path = ListOfThemes;
 			sourceTree = "<group>";
 		};
 		9445F60F2ACADCD700428550 /* ListOfBatas */ = {
@@ -119,7 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				945D83332A9CA7AE007DAB75 /* Application */,
-				9445F60E2ACADBB100428550 /* ListOfMaqals */,
+				9445F60E2ACADBB100428550 /* ListOfThemes */,
 				945D83412A9DEBB8007DAB75 /* DetailsMaqal */,
 				9445F60F2ACADCD700428550 /* ListOfBatas */,
 				945D831D2A9C866E007DAB75 /* Support files */,
@@ -131,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				945D831E2A9C889D007DAB75 /* Constants.swift */,
+				94988E092AD537220012E783 /* Keys.swift */,
 				945D83072A9C8323007DAB75 /* AppDelegate.swift */,
 				945D83092A9C8323007DAB75 /* SceneDelegate.swift */,
 				945D83102A9C8323007DAB75 /* Assets.xcassets */,
@@ -243,6 +248,7 @@
 			name = Maqal;
 			packageProductDependencies = (
 				945D83282A9C8A3F007DAB75 /* SnapKit */,
+				94988E052AD41BAF0012E783 /* GoogleMobileAds */,
 			);
 			productName = Maqal;
 			productReference = 945D83042A9C8323007DAB75 /* Maqal.app */;
@@ -274,6 +280,7 @@
 			mainGroup = 945D82FB2A9C8323007DAB75;
 			packageReferences = (
 				945D83272A9C8A3F007DAB75 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				94988E042AD41BAF0012E783 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
 			);
 			productRefGroup = 945D83052A9C8323007DAB75 /* Products */;
 			projectDirPath = "";
@@ -303,6 +310,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				945D830C2A9C8323007DAB75 /* MainViewController.swift in Sources */,
+				94988E0A2AD537220012E783 /* Keys.swift in Sources */,
 				945D83082A9C8323007DAB75 /* AppDelegate.swift in Sources */,
 				945D830A2A9C8323007DAB75 /* SceneDelegate.swift in Sources */,
 				945D834A2A9DF27F007DAB75 /* MaqalModel.swift in Sources */,
@@ -465,12 +473,13 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = maqal.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -497,12 +506,13 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = maqal.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -546,6 +556,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		94988E042AD41BAF0012E783 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.12.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -553,6 +571,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 945D83272A9C8A3F007DAB75 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		94988E052AD41BAF0012E783 /* GoogleMobileAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 94988E042AD41BAF0012E783 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
+			productName = GoogleMobileAds;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

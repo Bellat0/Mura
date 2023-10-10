@@ -7,14 +7,20 @@
 
 import UIKit
 import SnapKit
+import GoogleMobileAds
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, GADFullScreenContentDelegate {
 
     //MARK: - Private properties
 
     private let searchBar = UISearchBar()
     private let tableView = UITableView()
     private let titleImageView = UIImageView()
+
+    //MARK: - AdMob
+
+    private var interstitial: GADInterstitialAd?
+    private var bannerView: GADBannerView!
 
     //MARK: - Lyfe cycle
 
@@ -26,15 +32,18 @@ class MainViewController: UIViewController {
         navigationItem.titleView = titleImageView
 
         setupViews()
-        setupConstrints()
+        setupConstraints()
         detailsTableView()
+
+        setupAdMob()
+        addBannerViewToView()
     }
 
     //MARK: - Private methods
 
     private func setupViews() {
         view.addSubview(titleImageView)
-        titleImageView.image = UIImage(named: "Logo2")
+        titleImageView.image = UIImage(named: "LogoTitle")
         titleImageView.contentMode = .scaleAspectFill
 
         view.addSubview(searchBar)
@@ -47,7 +56,7 @@ class MainViewController: UIViewController {
         tableView.sectionHeaderTopPadding = 0
     }
 
-    private func setupConstrints() {
+    private func setupConstraints() {
         searchBar.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide)
             make.leading.equalToSuperview().offset(8)
@@ -81,6 +90,52 @@ class MainViewController: UIViewController {
             BataCollectionView.self,
             forCellReuseIdentifier: BataCollectionView.ID)
     }
+
+    func doSomething(_ sender: Any) {
+        if interstitial != nil {
+            interstitial!.present(fromRootViewController: self)
+        } else {
+            print("Ad wasn't ready")
+        }
+    }
+
+    //MARK: - Setup AdMob
+
+    private func setupAdMob() {
+        let request = GADRequest()
+
+        GADInterstitialAd.load(
+            withAdUnitID: themeTappedKey,
+            request: request,
+            completionHandler: { [self] ad, error in
+
+                if let error = error {
+                    print("Failed to load interstitial ad with error: \(error.localizedDescription)")
+                    return
+                }
+
+                interstitial = ad
+                interstitial?.fullScreenContentDelegate = self
+            }
+        )
+    }
+
+    private func addBannerViewToView() {
+        bannerView = GADBannerView(adSize: GADAdSizeBanner)
+        bannerView.adUnitID = bannerKey
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
+
+        view.addSubview(bannerView)
+        bannerView.backgroundColor = .clear
+
+        bannerView.snp.makeConstraints { make in
+            make.bottom.equalToSuperview().offset(-16)
+            make.centerX.equalToSuperview()
+            make.height.equalTo(50)
+            make.width.equalTo(320)
+        }
+    }
 }
 
 //MARK: - Table view data source
@@ -102,12 +157,19 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
             ) as? MaqalCollectionCell else { return UITableViewCell() }
 
             cell.goToMaqalVC = { [weak self] indexPath in
-                
+                DispatchQueue.main.async {
+                    if let interstitial = self?.interstitial {
+                        interstitial.present(fromRootViewController: self!)
+                    } else {
+                        print("Ad wasn't ready")
+                    }
+                }
+
                 let maqal = maqalDatabase[indexPath.row]
                 let maqalVC = MaqalViewController(maqal: maqal, title: maqal.title)
                 self?.navigationController?.pushViewController(maqalVC, animated: true)
             }
-            
+
             cell.selectionStyle = .none
 
             return cell
@@ -120,8 +182,8 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
 
             cell.selectionStyle = .none
 
-
             return cell
+
         }
 
         return UITableViewCell()
@@ -150,14 +212,14 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
 
-        if indexPath.section == 0 {
+        switch indexPath.section {
+        case 0:
             return 450
-
-        } else if indexPath.section == 1 {
+        case 1:
             return 270
+        default:
+            return 100
         }
-
-        return 0
     }
 
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

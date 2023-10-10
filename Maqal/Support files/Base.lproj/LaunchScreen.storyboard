@@ -16,11 +16,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoBG" translatesAutoresizingMaskIntoConstraints="NO" id="AB6-2L-nF3">
-                                <rect key="frame" x="106.66666666666669" y="209" width="180" height="180"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoBG" translatesAutoresizingMaskIntoConstraints="NO" id="AB6-2L-nF3">
+                                <rect key="frame" x="119" y="239" width="155" height="155"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="180" id="VDG-eX-5TI"/>
-                                    <constraint firstAttribute="height" constant="180" id="Yu5-ix-Dy3"/>
+                                    <constraint firstAttribute="width" constant="155" id="VDG-eX-5TI"/>
+                                    <constraint firstAttribute="height" constant="155" id="Yu5-ix-Dy3"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Created by Maxim Tvilinev" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qDJ-Vq-J1g">
@@ -30,7 +30,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maqal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWy-5B-BoY">
-                                <rect key="frame" x="141.33333333333334" y="413" width="110.66666666666666" height="46.666666666666686"/>
+                                <rect key="frame" x="141.33333333333334" y="422" width="110.66666666666666" height="46.666666666666686"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="40"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -40,8 +40,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qDJ-Vq-J1g" secondAttribute="bottom" constant="16" id="2s4-pF-ZbF"/>
-                            <constraint firstItem="AB6-2L-nF3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="7fT-nm-xWb"/>
-                            <constraint firstItem="eWy-5B-BoY" firstAttribute="top" secondItem="AB6-2L-nF3" secondAttribute="bottom" constant="24" id="7hG-ne-JhE"/>
+                            <constraint firstItem="AB6-2L-nF3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="180" id="7fT-nm-xWb"/>
+                            <constraint firstItem="eWy-5B-BoY" firstAttribute="top" secondItem="AB6-2L-nF3" secondAttribute="bottom" constant="28" id="7hG-ne-JhE"/>
                             <constraint firstItem="qDJ-Vq-J1g" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Hh1-DD-oqF"/>
                             <constraint firstItem="eWy-5B-BoY" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="gNw-Dx-dbN"/>
                             <constraint firstItem="AB6-2L-nF3" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="u5f-Pi-0C2"/>

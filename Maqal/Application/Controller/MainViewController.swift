@@ -70,7 +70,7 @@ class MainViewController: UIViewController, GADFullScreenContentDelegate {
         }
 
         titleImageView.snp.makeConstraints { make in
-            make.size.equalTo(24)
+            make.size.equalTo(20)
         }
     }
 
@@ -166,7 +166,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
                 }
 
                 let maqal = maqalDatabase[indexPath.row]
-                let maqalVC = MaqalViewController(maqal: maqal, title: maqal.title)
+                let maqalVC = MaqalViewController(maqal: maqal, title: maqal.themeTitle)
                 self?.navigationController?.pushViewController(maqalVC, animated: true)
             }
 
@@ -179,6 +179,16 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
                 withIdentifier: BataCollectionView.ID,
                 for: indexPath
             ) as? BataCollectionView else { return UITableViewCell() }
+
+            cell.selectionStyle = .none
+
+            cell.bataClosure = { [weak self] indexPath in
+
+                let bata = bataDataBase[indexPath.row]
+                let bataVC = BataViewController(bata: bata, title: bata.title)
+                self?.navigationController?.pushViewController(bataVC, animated: true)
+//                self?.present(bataVC, animated: true)
+            }
 
             cell.selectionStyle = .none
 

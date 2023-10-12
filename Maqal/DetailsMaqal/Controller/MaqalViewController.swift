@@ -63,7 +63,7 @@ class MaqalViewController: UIViewController {
     }
 }
 
-//MARK: - Table view data source
+// MARK: - Table view data source
 
 extension MaqalViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

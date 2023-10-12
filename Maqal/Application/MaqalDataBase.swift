@@ -7,17 +7,16 @@
 
 import Foundation
 
-//MARK: - Text DataBase
+// MARK: - Text DataBase
 
 let aboutUsText = "Maqal - незаменимый помощник для всех, кто стремится расширить свой кругозор и глубже погрузиться в наследие казахской культуры и традиций."
 
 let supportText = "Привет! Мне приятно видеть, что вы пользуетесь приложением Maqal, и я надеюсь, что оно приносит вам пользу. \n\nКак вы могли заметить, Maqal - это абсолютно бесплатное приложение. Однако, чтобы способствовать его дальнейшему развитию, я хотел бы попросить вас о поддержке небольшим донатом. \n\nНиже находится кнопка для копирования моего номера в Каспи. Заранее огромное спасибо за вашу поддержку!"
 
-//MARK: - Maqal DataBase
+// MARK: - Maqal DataBase
 
 var maqalDatabase = [
     Theme(
-        title: "Адам",
         image: "Adam",
         themeTitle: "Адам",
         themeTranslate: "Человек",
@@ -68,7 +67,6 @@ var maqalDatabase = [
     ),
 
 Theme(
-    title: "Ағайын",
     image: "Agayin",
     themeTitle: "Ағайын",
     themeTranslate: "Родня",
@@ -118,7 +116,6 @@ Theme(
 ),
 
 Theme(
-    title: "Ақыл",
     image: "Akyl",
     themeTitle: "Ақыл",
     themeTranslate: "Интеллект",
@@ -168,7 +165,6 @@ Theme(
 ),
 
 Theme(
-    title: "Арман",
     image: "Arman",
     themeTitle: "Арман",
     themeTranslate: "Мечта",
@@ -218,7 +214,6 @@ Theme(
 ),
 
 Theme(
-    title: "Бақыт",
     image: "Bakyt",
     themeTitle: "Бақыт",
     themeTranslate: "Счастье",
@@ -268,7 +263,6 @@ Theme(
 ),
 
 Theme(
-    title: "Байлык",
     image: "Baylyk",
     themeTitle: "Байлык",
     themeTranslate: "Богатсво",
@@ -318,7 +312,6 @@ Theme(
 ),
 
 Theme(
-    title: "Бipлiк",
     image: "Birlik",
     themeTitle: "Бipлiк",
     themeTranslate: "Единство",
@@ -368,7 +361,6 @@ Theme(
 ),
 
 Theme(
-    title: "Отан",
     image: "Otan",
     themeTitle: "Отан",
     themeTranslate: "Родина",
@@ -433,7 +425,6 @@ Theme(
 ),
 
     Theme(
-        title: "Халық",
         image: "Halyk",
         themeTitle: "Халық",
         themeTranslate: "Народ",
@@ -492,7 +483,6 @@ Theme(
     ),
 
     Theme(
-        title: "Еңбек",
         image: "Enbek",
         themeTitle: "Еңбек",
         themeTranslate: "Труд",
@@ -550,7 +540,6 @@ Theme(
     ),
 
     Theme(
-        title: "Шебер",
         image: "Sheber",
         themeTitle: "Шебер",
         themeTranslate: "Ремесло",
@@ -609,7 +598,6 @@ Theme(
     ),
 
     Theme(
-        title: "Өнер",
         image: "Oner",
         themeTitle: "Өнер",
         themeTranslate: "Искусство",
@@ -668,7 +656,6 @@ Theme(
     ),
 
     Theme(
-        title: "Тiл",
         image: "Til",
         themeTitle: "Тiл",
         themeTranslate: "Язык",
@@ -727,7 +714,6 @@ Theme(
     ),
 
     Theme(
-        title: "Пайда",
         image: "Paida",
         themeTitle: "Пайда",
         themeTranslate: "Польза",
@@ -786,7 +772,6 @@ Theme(
     ),
 
     Theme(
-        title: "Денсаулық",
         image: "Densaulyk",
         themeTitle: "Денсаулық",
         themeTranslate: "Здоровье",
@@ -845,7 +830,6 @@ Theme(
     ),
 
     Theme(
-        title: "Тәрбие",
         image: "Tarbie",
         themeTitle: "Тәрбие",
         themeTranslate: "Воспитание",
@@ -904,7 +888,6 @@ Theme(
     ),
 
     Theme(
-        title: "Уақыт",
         image: "Uakyt",
         themeTitle: "Уақыт",
         themeTranslate: "Время",
@@ -963,7 +946,6 @@ Theme(
     ),
 
     Theme(
-        title: "Жанұя",
         image: "Januya",
         themeTitle: "Жанұя",
         themeTranslate: "Семья",
@@ -1021,7 +1003,6 @@ Theme(
     ),
 
     Theme(
-        title: "Жалғыздық",
         image: "Zhalgyzdyk",
         themeTitle: "Жалғыздық",
         themeTranslate: "Одиночество",
@@ -1080,7 +1061,6 @@ Theme(
     ),
 
     Theme(
-        title: "Сөз",
         image: "Soz",
         themeTitle: "Сөз",
         themeTranslate: "Слово",

@@ -8,7 +8,6 @@
 import Foundation
 
 struct Theme {
-    let title: String
     let image: String
     let themeTitle: String
     let themeTranslate: String

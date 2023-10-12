@@ -24,6 +24,10 @@ class BataCollectionView: UITableViewCell {
         return vc
     }()
 
+    // MARK: - Closures
+
+    var bataClosure: ((IndexPath) -> Void)?
+
     //MARK: - View lifecycle
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -92,7 +96,7 @@ class BataCollectionView: UITableViewCell {
 
 extension BataCollectionView: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return bataDataBase.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -101,7 +105,16 @@ extension BataCollectionView: UICollectionViewDataSource, UICollectionViewDelega
             for: indexPath
         ) as? BataCollectionCell else { return UICollectionViewCell() }
 
+        let bata = bataDataBase[indexPath.row]
+        cell.configureCell(bata: bata)
+
         return cell
+    }
+
+    // MARK: - didSelect
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        bataClosure?(indexPath)
     }
 }
 
@@ -131,5 +144,4 @@ extension BataCollectionView: UICollectionViewDelegateFlowLayout {
 
         return 1
     }
-
 }

@@ -15,9 +15,8 @@ class BataCollectionCell: UICollectionViewCell {
 
     private let imageView = UIImageView()
     private let titleLabel = UILabel()
-    private let descriptionLabel = UILabel()
 
-    //MARK: - Lyfe cycle
+    //MARK: - Lifecycle
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -42,10 +41,6 @@ class BataCollectionCell: UICollectionViewCell {
         contentView.addSubview(titleLabel)
         titleLabel.textColor = .white
         titleLabel.font = UIFont.systemFont(ofSize: 16, weight: .medium)
-
-        contentView.addSubview(descriptionLabel)
-        descriptionLabel.textColor = Colors.LightGrayColor
-        descriptionLabel.font = UIFont.systemFont(ofSize: 14, weight: .regular)
     }
 
     private func setupConstraints() {
@@ -59,19 +54,12 @@ class BataCollectionCell: UICollectionViewCell {
             make.top.equalTo(imageView.snp.bottom).offset(12)
             make.centerX.equalToSuperview()
         }
-
-        descriptionLabel.snp.makeConstraints { make in
-            make.top.equalTo(titleLabel.snp.bottom).offset(4)
-            make.centerX.equalToSuperview()
-        }
     }
 
     //MARK: - Configure methods
 
-    func configureCell(data: Theme) {
-        self.titleLabel.text = data.themeTitle.uppercased()
-        self.descriptionLabel.text = data.themeTranslate.uppercased()
-        self.imageView.image = UIImage(named: data.image)
+    func configureCell(bata: BataThemesModel) {
+        self.titleLabel.text = bata.title
+        self.imageView.image = UIImage(named: bata.image)
     }
-
 }

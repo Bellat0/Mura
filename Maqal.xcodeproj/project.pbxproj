@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9442096D2AD7F00F00D262FB /* BataDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9442096C2AD7F00F00D262FB /* BataDataBase.swift */; };
+		944209702AD7F28000D262FB /* BataThemesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9442096F2AD7F28000D262FB /* BataThemesModel.swift */; };
+		944209722AD80DE600D262FB /* BataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944209712AD80DE600D262FB /* BataModel.swift */; };
+		944209772AD80EF900D262FB /* BataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944209762AD80EF900D262FB /* BataViewController.swift */; };
+		944209792AD80F5300D262FB /* BataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944209782AD80F5300D262FB /* BataCell.swift */; };
 		9445F6112ACADCF500428550 /* BataCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9445F6102ACADCF500428550 /* BataCollectionView.swift */; };
 		9445F6152ACAE1A900428550 /* BataCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9445F6142ACAE1A900428550 /* BataCollectionCell.swift */; };
 		945D83082A9C8323007DAB75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D83072A9C8323007DAB75 /* AppDelegate.swift */; };
@@ -21,7 +26,7 @@
 		945D832B2A9C8C18007DAB75 /* TableViewHeaderSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D832A2A9C8C18007DAB75 /* TableViewHeaderSection.swift */; };
 		945D832E2A9C9BCE007DAB75 /* ThemesCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D832D2A9C9BCE007DAB75 /* ThemesCollectionCell.swift */; };
 		945D83322A9CA688007DAB75 /* ThemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D83312A9CA688007DAB75 /* ThemeModel.swift */; };
-		945D83352A9CA7BE007DAB75 /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D83342A9CA7BE007DAB75 /* DataBase.swift */; };
+		945D83352A9CA7BE007DAB75 /* MaqalDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D83342A9CA7BE007DAB75 /* MaqalDataBase.swift */; };
 		945D83432A9DF101007DAB75 /* MaqalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D83422A9DF101007DAB75 /* MaqalViewController.swift */; };
 		945D83472A9DF1E2007DAB75 /* MaqalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D83462A9DF1E2007DAB75 /* MaqalCell.swift */; };
 		945D834A2A9DF27F007DAB75 /* MaqalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D83492A9DF27F007DAB75 /* MaqalModel.swift */; };
@@ -31,6 +36,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9442096C2AD7F00F00D262FB /* BataDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BataDataBase.swift; sourceTree = "<group>"; };
+		9442096F2AD7F28000D262FB /* BataThemesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BataThemesModel.swift; sourceTree = "<group>"; };
+		944209712AD80DE600D262FB /* BataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BataModel.swift; sourceTree = "<group>"; };
+		944209762AD80EF900D262FB /* BataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BataViewController.swift; sourceTree = "<group>"; };
+		944209782AD80F5300D262FB /* BataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BataCell.swift; sourceTree = "<group>"; };
 		9445F6102ACADCF500428550 /* BataCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BataCollectionView.swift; sourceTree = "<group>"; };
 		9445F6142ACAE1A900428550 /* BataCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BataCollectionCell.swift; sourceTree = "<group>"; };
 		945D83042A9C8323007DAB75 /* Maqal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Maqal.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,7 +56,7 @@
 		945D832A2A9C8C18007DAB75 /* TableViewHeaderSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewHeaderSection.swift; sourceTree = "<group>"; };
 		945D832D2A9C9BCE007DAB75 /* ThemesCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemesCollectionCell.swift; sourceTree = "<group>"; };
 		945D83312A9CA688007DAB75 /* ThemeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeModel.swift; sourceTree = "<group>"; };
-		945D83342A9CA7BE007DAB75 /* DataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBase.swift; sourceTree = "<group>"; };
+		945D83342A9CA7BE007DAB75 /* MaqalDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaqalDataBase.swift; sourceTree = "<group>"; };
 		945D83422A9DF101007DAB75 /* MaqalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaqalViewController.swift; sourceTree = "<group>"; };
 		945D83462A9DF1E2007DAB75 /* MaqalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaqalCell.swift; sourceTree = "<group>"; };
 		945D83492A9DF27F007DAB75 /* MaqalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaqalModel.swift; sourceTree = "<group>"; };
@@ -67,23 +77,58 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9445F60E2ACADBB100428550 /* ListOfThemes */ = {
+		9442096E2AD7F21900D262FB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9442096F2AD7F28000D262FB /* BataThemesModel.swift */,
+				944209712AD80DE600D262FB /* BataModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		944209732AD80EA700D262FB /* DetailsBata */ = {
+			isa = PBXGroup;
+			children = (
+				944209742AD80EB300D262FB /* Controller */,
+				944209752AD80EB900D262FB /* View */,
+			);
+			path = DetailsBata;
+			sourceTree = "<group>";
+		};
+		944209742AD80EB300D262FB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				944209762AD80EF900D262FB /* BataViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		944209752AD80EB900D262FB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				944209782AD80F5300D262FB /* BataCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9445F60E2ACADBB100428550 /* ListOfMaqalThemes */ = {
 			isa = PBXGroup;
 			children = (
 				945D83302A9CA676007DAB75 /* Model */,
 				945D834B2A9E0281007DAB75 /* Controller */,
 				945D832F2A9CA672007DAB75 /* View */,
 			);
-			path = ListOfThemes;
+			path = ListOfMaqalThemes;
 			sourceTree = "<group>";
 		};
-		9445F60F2ACADCD700428550 /* ListOfBatas */ = {
+		9445F60F2ACADCD700428550 /* ListOfBatasThemes */ = {
 			isa = PBXGroup;
 			children = (
+				9442096E2AD7F21900D262FB /* Model */,
 				9445F6122ACAE10200428550 /* Controller */,
 				9445F6132ACAE11400428550 /* View */,
 			);
-			path = ListOfBatas;
+			path = ListOfBatasThemes;
 			sourceTree = "<group>";
 		};
 		9445F6122ACAE10200428550 /* Controller */ = {
@@ -123,9 +168,10 @@
 			isa = PBXGroup;
 			children = (
 				945D83332A9CA7AE007DAB75 /* Application */,
-				9445F60E2ACADBB100428550 /* ListOfThemes */,
+				9445F60E2ACADBB100428550 /* ListOfMaqalThemes */,
 				945D83412A9DEBB8007DAB75 /* DetailsMaqal */,
-				9445F60F2ACADCD700428550 /* ListOfBatas */,
+				9445F60F2ACADCD700428550 /* ListOfBatasThemes */,
+				944209732AD80EA700D262FB /* DetailsBata */,
 				945D831D2A9C866E007DAB75 /* Support files */,
 			);
 			path = Maqal;
@@ -181,7 +227,8 @@
 		945D83332A9CA7AE007DAB75 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				945D83342A9CA7BE007DAB75 /* DataBase.swift */,
+				945D83342A9CA7BE007DAB75 /* MaqalDataBase.swift */,
+				9442096C2AD7F00F00D262FB /* BataDataBase.swift */,
 				945D83202A9C89B9007DAB75 /* Controller */,
 				945D83212A9C89C1007DAB75 /* View */,
 			);
@@ -314,16 +361,21 @@
 				945D83082A9C8323007DAB75 /* AppDelegate.swift in Sources */,
 				945D830A2A9C8323007DAB75 /* SceneDelegate.swift in Sources */,
 				945D834A2A9DF27F007DAB75 /* MaqalModel.swift in Sources */,
+				944209792AD80F5300D262FB /* BataCell.swift in Sources */,
 				945D832B2A9C8C18007DAB75 /* TableViewHeaderSection.swift in Sources */,
 				9445F6112ACADCF500428550 /* BataCollectionView.swift in Sources */,
-				945D83352A9CA7BE007DAB75 /* DataBase.swift in Sources */,
+				945D83352A9CA7BE007DAB75 /* MaqalDataBase.swift in Sources */,
 				945D83472A9DF1E2007DAB75 /* MaqalCell.swift in Sources */,
+				944209722AD80DE600D262FB /* BataModel.swift in Sources */,
 				9445F6152ACAE1A900428550 /* BataCollectionCell.swift in Sources */,
 				945D83432A9DF101007DAB75 /* MaqalViewController.swift in Sources */,
 				945D834E2A9E02C5007DAB75 /* SearchViewController.swift in Sources */,
 				945D832E2A9C9BCE007DAB75 /* ThemesCollectionCell.swift in Sources */,
+				944209702AD7F28000D262FB /* BataThemesModel.swift in Sources */,
 				945D831F2A9C889D007DAB75 /* Constants.swift in Sources */,
+				9442096D2AD7F00F00D262FB /* BataDataBase.swift in Sources */,
 				945D83252A9C8A07007DAB75 /* MaqalCollectionCell.swift in Sources */,
+				944209772AD80EF900D262FB /* BataViewController.swift in Sources */,
 				945D83322A9CA688007DAB75 /* ThemeModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

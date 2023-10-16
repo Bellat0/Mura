@@ -79,6 +79,8 @@ extension BataViewController: UITableViewDelegate, UITableViewDataSource {
         let bata = bata.bataTitle[indexPath.row]
         cell.configureCell(bata: bata)
 
+        cell.selectionStyle = .none
+        
         return cell
     }
 

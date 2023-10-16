@@ -51,7 +51,7 @@ class BataCollectionView: UITableViewCell {
 
         contentView.addSubview(titleLabel)
         titleLabel.numberOfLines = 0
-        titleLabel.text = "Бата - обряд, при котором человек, обычно молодожёны, получают благословение от старших членов семьи или общины"
+        titleLabel.text = aboutBata
         titleLabel.textAlignment = .center
         titleLabel.textColor = Colors.GrayColor
         titleLabel.font = UIFont.systemFont(ofSize: 14)
@@ -127,7 +127,7 @@ extension BataCollectionView: UICollectionViewDelegateFlowLayout {
         let availableWidth = collectionView.frame.width - paddingWidth
         let itemWidth = availableWidth / Layout.bataItems
 
-        return CGSize(width: itemWidth + 50, height: 150)
+        return CGSize(width: itemWidth, height: 150)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {

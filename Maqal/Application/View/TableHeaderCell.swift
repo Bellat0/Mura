@@ -1,27 +1,28 @@
 //
-//  BataCollectionCell.swift
+//  TableHeaderCell.swift
 //  Maqal
 //
-//  Created by Maxim Tvilinev on 02.10.2023.
+//  Created by Maxim Tvilinev on 14.10.2023.
 //
 
 import UIKit
 
-class BataCollectionCell: UICollectionViewCell {
+class TableHeaderCell: UICollectionViewCell {
     
-    static let ID = "BataCollectionCell"
+    static let ID = "TableHeaderCell"
 
     //MARK: - Private properties
 
     private let imageView = UIImageView()
     private let titleLabel = UILabel()
+    private let descriptionLabel = UILabel()
 
-    //MARK: - Lifecycle
+    //MARK: - Lyfe cycle
 
     override init(frame: CGRect) {
         super.init(frame: frame)
 
-        contentView.backgroundColor = Colors.PurpleColor
+        contentView.backgroundColor = Colors.BlueColor
 
         setupViews()
         setupConstraints()
@@ -41,6 +42,10 @@ class BataCollectionCell: UICollectionViewCell {
         contentView.addSubview(titleLabel)
         titleLabel.textColor = .white
         titleLabel.font = UIFont.systemFont(ofSize: 16, weight: .medium)
+
+        contentView.addSubview(descriptionLabel)
+        descriptionLabel.textColor = Colors.LightGrayColor
+        descriptionLabel.font = UIFont.systemFont(ofSize: 14, weight: .regular)
     }
 
     private func setupConstraints() {
@@ -54,12 +59,10 @@ class BataCollectionCell: UICollectionViewCell {
             make.top.equalTo(imageView.snp.bottom).offset(12)
             make.centerX.equalToSuperview()
         }
-    }
 
-    //MARK: - Configure methods
-
-    func configureCell(bata: BataThemesModel) {
-        self.titleLabel.text = bata.title.uppercased()
-        self.imageView.image = UIImage(named: bata.image)
+        descriptionLabel.snp.makeConstraints { make in
+            make.top.equalTo(titleLabel.snp.bottom).offset(4)
+            make.centerX.equalToSuperview()
+        }
     }
 }

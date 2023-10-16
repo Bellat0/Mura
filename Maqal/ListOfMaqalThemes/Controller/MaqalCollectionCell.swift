@@ -49,7 +49,7 @@ class MaqalCollectionCell: UITableViewCell {
 
         contentView.addSubview(titleLabel)
         titleLabel.numberOfLines = 0
-        titleLabel.text = "Пословица - это короткое, звучное высказывание, содержащее мудрость, жизненный опыт или народную мораль"
+        titleLabel.text = aboutMaqal
         titleLabel.textAlignment = .center
         titleLabel.textColor = Colors.GrayColor
         titleLabel.font = UIFont.systemFont(ofSize: 14)

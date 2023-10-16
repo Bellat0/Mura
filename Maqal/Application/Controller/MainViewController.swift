@@ -16,6 +16,7 @@ class MainViewController: UIViewController, GADFullScreenContentDelegate {
     private let searchBar = UISearchBar()
     private let tableView = UITableView()
     private let titleImageView = UIImageView()
+    private let tableHeader = TableHeaderView(frame: CGRect(x: 0, y: 0, width: 0, height: 140))
 
     //MARK: - AdMob
 
@@ -49,7 +50,7 @@ class MainViewController: UIViewController, GADFullScreenContentDelegate {
         view.addSubview(searchBar)
         searchBar.delegate = self
         searchBar.searchBarStyle = .minimal
-        searchBar.placeholder = "Поиск"
+        searchBar.placeholder = "Поиск пословиц"
 
         view.addSubview(tableView)
         tableView.separatorStyle = .none
@@ -70,13 +71,15 @@ class MainViewController: UIViewController, GADFullScreenContentDelegate {
         }
 
         titleImageView.snp.makeConstraints { make in
-            make.size.equalTo(20)
+            make.size.equalTo(25)
         }
     }
 
     private func detailsTableView() {
         tableView.delegate = self
         tableView.dataSource = self
+
+        tableView.tableHeaderView = tableHeader
 
         tableView.register(
             TableViewHeaderSection.self,
@@ -157,13 +160,13 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
             ) as? MaqalCollectionCell else { return UITableViewCell() }
 
             cell.goToMaqalVC = { [weak self] indexPath in
-                DispatchQueue.main.async {
-                    if let interstitial = self?.interstitial {
-                        interstitial.present(fromRootViewController: self!)
-                    } else {
-                        print("Ad wasn't ready")
-                    }
+
+                if let interstitial = self?.interstitial {
+                    interstitial.present(fromRootViewController: self!)
+                } else {
+                    print("Ad wasn't ready")
                 }
+
 
                 let maqal = maqalDatabase[indexPath.row]
                 let maqalVC = MaqalViewController(maqal: maqal, title: maqal.themeTitle)
@@ -187,7 +190,6 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
                 let bata = bataDataBase[indexPath.row]
                 let bataVC = BataViewController(bata: bata, title: bata.title)
                 self?.navigationController?.pushViewController(bataVC, animated: true)
-//                self?.present(bataVC, animated: true)
             }
 
             cell.selectionStyle = .none
@@ -226,7 +228,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         case 0:
             return 450
         case 1:
-            return 270
+            return 260
         default:
             return 100
         }

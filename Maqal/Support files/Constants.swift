@@ -19,7 +19,8 @@ enum Colors {
     static let GrayColor = UIColor.rgb(r: 90, g: 90, b: 90)
     static let LightGrayColor = UIColor.rgb(r: 245, g: 245, b: 245)
     static let DarkGrayColor = UIColor.rgb(r: 59, g: 59, b: 59)
-    static let PurpleColor = UIColor.rgb(r: 109, g: 69, b: 225)
+    static let PurpleColor = UIColor.rgb(r: 92, g: 68, b: 232)
+    static let PurpleColor1 = UIColor.rgb(r: 109, g: 69, b: 225)
 }
 
 //MARK: - Enum for collection view insets

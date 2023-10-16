@@ -34,8 +34,9 @@ class BataCell: UITableViewCell {
         contentView.addSubview(titleLabel)
         titleLabel.textColor = Colors.DarkGrayColor
         titleLabel.font = UIFont(name: "Helvetica Neue", size: 18)
-        titleLabel.font = UIFont.boldSystemFont(ofSize: 18)
+//        titleLabel.font = UIFont.boldSystemFont(ofSize: 18)
         titleLabel.numberOfLines = 0
+        titleLabel.textAlignment = .center
     }
 
     private func setupConstraints() {

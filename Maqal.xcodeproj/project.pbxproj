@@ -31,6 +31,9 @@
 		945D83472A9DF1E2007DAB75 /* MaqalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D83462A9DF1E2007DAB75 /* MaqalCell.swift */; };
 		945D834A2A9DF27F007DAB75 /* MaqalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D83492A9DF27F007DAB75 /* MaqalModel.swift */; };
 		945D834E2A9E02C5007DAB75 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D834D2A9E02C5007DAB75 /* SearchViewController.swift */; };
+		9491BE372AD9CDB3005AB5C6 /* TildaSans-VF.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9491BE362AD9CDB3005AB5C6 /* TildaSans-VF.ttf */; };
+		9491BE392AD9D0A6005AB5C6 /* TableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9491BE382AD9D0A6005AB5C6 /* TableHeaderView.swift */; };
+		9491BE3B2AD9D1AB005AB5C6 /* TableHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9491BE3A2AD9D1AB005AB5C6 /* TableHeaderCell.swift */; };
 		94988E062AD41BAF0012E783 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = 94988E052AD41BAF0012E783 /* GoogleMobileAds */; };
 		94988E0A2AD537220012E783 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94988E092AD537220012E783 /* Keys.swift */; };
 /* End PBXBuildFile section */
@@ -43,7 +46,7 @@
 		944209782AD80F5300D262FB /* BataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BataCell.swift; sourceTree = "<group>"; };
 		9445F6102ACADCF500428550 /* BataCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BataCollectionView.swift; sourceTree = "<group>"; };
 		9445F6142ACAE1A900428550 /* BataCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BataCollectionCell.swift; sourceTree = "<group>"; };
-		945D83042A9C8323007DAB75 /* Maqal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Maqal.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		945D83042A9C8323007DAB75 /* Mura.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mura.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		945D83072A9C8323007DAB75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		945D83092A9C8323007DAB75 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		945D830B2A9C8323007DAB75 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +64,9 @@
 		945D83462A9DF1E2007DAB75 /* MaqalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaqalCell.swift; sourceTree = "<group>"; };
 		945D83492A9DF27F007DAB75 /* MaqalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaqalModel.swift; sourceTree = "<group>"; };
 		945D834D2A9E02C5007DAB75 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		9491BE362AD9CDB3005AB5C6 /* TildaSans-VF.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TildaSans-VF.ttf"; sourceTree = "<group>"; };
+		9491BE382AD9D0A6005AB5C6 /* TableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableHeaderView.swift; sourceTree = "<group>"; };
+		9491BE3A2AD9D1AB005AB5C6 /* TableHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableHeaderCell.swift; sourceTree = "<group>"; };
 		94988E092AD537220012E783 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -159,7 +165,7 @@
 		945D83052A9C8323007DAB75 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				945D83042A9C8323007DAB75 /* Maqal.app */,
+				945D83042A9C8323007DAB75 /* Mura.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -180,12 +186,12 @@
 		945D831D2A9C866E007DAB75 /* Support files */ = {
 			isa = PBXGroup;
 			children = (
+				9491BE352AD9CDA6005AB5C6 /* Fonts */,
 				945D831E2A9C889D007DAB75 /* Constants.swift */,
 				94988E092AD537220012E783 /* Keys.swift */,
 				945D83072A9C8323007DAB75 /* AppDelegate.swift */,
 				945D83092A9C8323007DAB75 /* SceneDelegate.swift */,
 				945D83102A9C8323007DAB75 /* Assets.xcassets */,
-				945D83122A9C8323007DAB75 /* LaunchScreen.storyboard */,
 				945D83152A9C8323007DAB75 /* Info.plist */,
 			);
 			path = "Support files";
@@ -204,6 +210,9 @@
 			isa = PBXGroup;
 			children = (
 				945D832A2A9C8C18007DAB75 /* TableViewHeaderSection.swift */,
+				9491BE382AD9D0A6005AB5C6 /* TableHeaderView.swift */,
+				9491BE3A2AD9D1AB005AB5C6 /* TableHeaderCell.swift */,
+				945D83122A9C8323007DAB75 /* LaunchScreen.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -277,12 +286,20 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		9491BE352AD9CDA6005AB5C6 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				9491BE362AD9CDB3005AB5C6 /* TildaSans-VF.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		945D83032A9C8323007DAB75 /* Maqal */ = {
+		945D83032A9C8323007DAB75 /* Mura */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 945D83182A9C8323007DAB75 /* Build configuration list for PBXNativeTarget "Maqal" */;
+			buildConfigurationList = 945D83182A9C8323007DAB75 /* Build configuration list for PBXNativeTarget "Mura" */;
 			buildPhases = (
 				945D83002A9C8323007DAB75 /* Sources */,
 				945D83012A9C8323007DAB75 /* Frameworks */,
@@ -292,13 +309,13 @@
 			);
 			dependencies = (
 			);
-			name = Maqal;
+			name = Mura;
 			packageProductDependencies = (
 				945D83282A9C8A3F007DAB75 /* SnapKit */,
 				94988E052AD41BAF0012E783 /* GoogleMobileAds */,
 			);
 			productName = Maqal;
-			productReference = 945D83042A9C8323007DAB75 /* Maqal.app */;
+			productReference = 945D83042A9C8323007DAB75 /* Mura.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -333,7 +350,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				945D83032A9C8323007DAB75 /* Maqal */,
+				945D83032A9C8323007DAB75 /* Mura */,
 			);
 		};
 /* End PBXProject section */
@@ -343,6 +360,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9491BE372AD9CDB3005AB5C6 /* TildaSans-VF.ttf in Resources */,
 				945D831C2A9C832F007DAB75 /* .gitignore in Resources */,
 				945D83142A9C8323007DAB75 /* LaunchScreen.storyboard in Resources */,
 				945D83112A9C8323007DAB75 /* Assets.xcassets in Resources */,
@@ -358,6 +376,7 @@
 			files = (
 				945D830C2A9C8323007DAB75 /* MainViewController.swift in Sources */,
 				94988E0A2AD537220012E783 /* Keys.swift in Sources */,
+				9491BE3B2AD9D1AB005AB5C6 /* TableHeaderCell.swift in Sources */,
 				945D83082A9C8323007DAB75 /* AppDelegate.swift in Sources */,
 				945D830A2A9C8323007DAB75 /* SceneDelegate.swift in Sources */,
 				945D834A2A9DF27F007DAB75 /* MaqalModel.swift in Sources */,
@@ -372,6 +391,7 @@
 				945D834E2A9E02C5007DAB75 /* SearchViewController.swift in Sources */,
 				945D832E2A9C9BCE007DAB75 /* ThemesCollectionCell.swift in Sources */,
 				944209702AD7F28000D262FB /* BataThemesModel.swift in Sources */,
+				9491BE392AD9D0A6005AB5C6 /* TableHeaderView.swift in Sources */,
 				945D831F2A9C889D007DAB75 /* Constants.swift in Sources */,
 				9442096D2AD7F00F00D262FB /* BataDataBase.swift in Sources */,
 				945D83252A9C8A07007DAB75 /* MaqalCollectionCell.swift in Sources */,
@@ -520,6 +540,7 @@
 				DEVELOPMENT_TEAM = J8L5S42HGH;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Maqal/Support files/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Mura;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -553,6 +574,7 @@
 				DEVELOPMENT_TEAM = J8L5S42HGH;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Maqal/Support files/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Mura;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -588,7 +610,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		945D83182A9C8323007DAB75 /* Build configuration list for PBXNativeTarget "Maqal" */ = {
+		945D83182A9C8323007DAB75 /* Build configuration list for PBXNativeTarget "Mura" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				945D83192A9C8323007DAB75 /* Debug */,

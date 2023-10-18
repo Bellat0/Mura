@@ -42,10 +42,12 @@ class ThemesCollectionCell: UICollectionViewCell {
         contentView.addSubview(titleLabel)
         titleLabel.textColor = .white
         titleLabel.font = UIFont.systemFont(ofSize: 16, weight: .medium)
+        titleLabel.textAlignment = .center
 
         contentView.addSubview(descriptionLabel)
         descriptionLabel.textColor = Colors.LightGrayColor
         descriptionLabel.font = UIFont.systemFont(ofSize: 14, weight: .regular)
+        descriptionLabel.textAlignment = .center
     }
 
     private func setupConstraints() {
@@ -57,12 +59,14 @@ class ThemesCollectionCell: UICollectionViewCell {
 
         titleLabel.snp.makeConstraints { make in
             make.top.equalTo(imageView.snp.bottom).offset(12)
-            make.centerX.equalToSuperview()
+            make.leading.equalToSuperview().offset(4)
+            make.trailing.equalToSuperview().offset(-4)
         }
 
         descriptionLabel.snp.makeConstraints { make in
             make.top.equalTo(titleLabel.snp.bottom).offset(4)
-            make.centerX.equalToSuperview()
+            make.leading.equalToSuperview().offset(4)
+            make.trailing.equalToSuperview().offset(-4)
         }
     }
 

@@ -14,6 +14,7 @@ class MainViewController: UIViewController, GADFullScreenContentDelegate {
     //MARK: - Private properties
 
     private let searchBar = UISearchBar()
+    private let settingsButton = UIButton()
     private let tableView = UITableView()
     private let titleImageView = UIImageView()
     private let tableHeader = TableHeaderView(frame: CGRect(x: 0, y: 0, width: 0, height: 140))
@@ -31,6 +32,7 @@ class MainViewController: UIViewController, GADFullScreenContentDelegate {
         view.backgroundColor = .white
         tableView.backgroundColor = .white
         navigationItem.titleView = titleImageView
+        title = "Mūra"
 
         setupViews()
         setupConstraints()
@@ -44,13 +46,17 @@ class MainViewController: UIViewController, GADFullScreenContentDelegate {
 
     private func setupViews() {
         view.addSubview(titleImageView)
-        titleImageView.image = UIImage(named: "LogoTitle")
+        titleImageView.image = UIImage(named: "LogoBG")
         titleImageView.contentMode = .scaleAspectFill
 
         view.addSubview(searchBar)
         searchBar.delegate = self
         searchBar.searchBarStyle = .minimal
         searchBar.placeholder = "Поиск пословиц"
+
+        view.addSubview(settingsButton)
+        settingsButton.setImage(UIImage(systemName: "gearshape"), for: .normal)
+        settingsButton.tintColor = Colors.DarkGrayColor
 
         view.addSubview(tableView)
         tableView.separatorStyle = .none
@@ -61,7 +67,12 @@ class MainViewController: UIViewController, GADFullScreenContentDelegate {
         searchBar.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide)
             make.leading.equalToSuperview().offset(8)
-            make.trailing.equalToSuperview().offset(-8)
+            make.trailing.equalToSuperview().offset(-38)
+        }
+
+        settingsButton.snp.makeConstraints { make in
+            make.trailing.equalToSuperview().offset(-18)
+            make.centerY.equalTo(searchBar)
         }
 
         tableView.snp.makeConstraints { make in

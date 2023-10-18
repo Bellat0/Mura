@@ -41,6 +41,8 @@ class BataCollectionCell: UICollectionViewCell {
         contentView.addSubview(titleLabel)
         titleLabel.textColor = .white
         titleLabel.font = UIFont.systemFont(ofSize: 16, weight: .medium)
+        titleLabel.numberOfLines = 0
+        titleLabel.textAlignment = .center
     }
 
     private func setupConstraints() {
@@ -52,7 +54,8 @@ class BataCollectionCell: UICollectionViewCell {
 
         titleLabel.snp.makeConstraints { make in
             make.top.equalTo(imageView.snp.bottom).offset(12)
-            make.centerX.equalToSuperview()
+            make.leading.equalToSuperview().offset(2)
+            make.trailing.equalToSuperview().offset(-2)
         }
     }
 

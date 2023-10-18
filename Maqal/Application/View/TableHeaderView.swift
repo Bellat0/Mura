@@ -46,8 +46,8 @@ class TableHeaderView: UIView {
         collectionView.snp.makeConstraints { make in
             make.top.equalToSuperview()
             make.bottom.equalToSuperview()
-            make.leading.equalToSuperview().offset(8)
-            make.trailing.equalToSuperview().offset(-8)
+            make.width.equalTo(UIScreen.main.bounds.width - 32)
+            make.centerX.equalToSuperview()
         }
     }
 

@@ -22,8 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         func createNavi() -> UINavigationController {
             let mainVC = MainViewController()
-            mainVC.title = "Maqal"
-
+            
             return UINavigationController(rootViewController: mainVC)
         }
 

@@ -123,9 +123,17 @@ extension BataCollectionView: UICollectionViewDataSource, UICollectionViewDelega
 extension BataCollectionView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 
-        let paddingWidth = 8 * (Layout.bataItems + 1)
-        let availableWidth = collectionView.frame.width - paddingWidth
-        let itemWidth = availableWidth / Layout.bataItems
+        let bataDatabase = bataDataBase[indexPath.row].title
+
+        let titleLabel = UILabel()
+        titleLabel.font = UIFont.systemFont(ofSize: 16, weight: .medium)
+        titleLabel.text = bataDatabase
+        titleLabel.numberOfLines = 0
+
+        let titleConstraints = CGSize(width: CGFloat.greatestFiniteMagnitude, height: CGFloat.greatestFiniteMagnitude)
+        let titleSize = titleLabel.sizeThatFits(titleConstraints)
+
+        let itemWidth = 15 + titleSize.width + 25
 
         return CGSize(width: itemWidth, height: 150)
     }

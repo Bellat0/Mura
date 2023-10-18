@@ -17,34 +17,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoBG" translatesAutoresizingMaskIntoConstraints="NO" id="AB6-2L-nF3">
-                                <rect key="frame" x="104" y="209" width="185" height="185"/>
+                                <rect key="frame" x="134" y="376" width="125" height="125"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="185" id="VDG-eX-5TI"/>
-                                    <constraint firstAttribute="height" constant="185" id="Yu5-ix-Dy3"/>
+                                    <constraint firstAttribute="width" constant="125" id="VDG-eX-5TI"/>
+                                    <constraint firstAttribute="height" constant="125" id="Yu5-ix-Dy3"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Created by Maxim Tvilinev" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qDJ-Vq-J1g">
-                                <rect key="frame" x="102.00000000000001" y="783.33333333333337" width="189.33333333333337" height="18.666666666666629"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mūra" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWy-5B-BoY">
-                                <rect key="frame" x="150.66666666666666" y="412" width="92" height="46.666666666666686"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="40"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.1176470518" green="0.2941176593" blue="0.78431367870000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qDJ-Vq-J1g" secondAttribute="bottom" constant="16" id="2s4-pF-ZbF"/>
-                            <constraint firstItem="AB6-2L-nF3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="7fT-nm-xWb"/>
-                            <constraint firstItem="eWy-5B-BoY" firstAttribute="top" secondItem="AB6-2L-nF3" secondAttribute="bottom" constant="18" id="7hG-ne-JhE"/>
-                            <constraint firstItem="qDJ-Vq-J1g" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Hh1-DD-oqF"/>
-                            <constraint firstItem="eWy-5B-BoY" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="gNw-Dx-dbN"/>
-                            <constraint firstItem="AB6-2L-nF3" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="u5f-Pi-0C2"/>
+                            <constraint firstItem="AB6-2L-nF3" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="aCm-N1-Vcn"/>
+                            <constraint firstItem="AB6-2L-nF3" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="r8G-dG-PHj"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -54,6 +38,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="LogoBG" width="680" height="666"/>
+        <image name="LogoBG" width="1024" height="1024"/>
     </resources>
 </document>

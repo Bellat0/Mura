@@ -17,12 +17,11 @@ class MainViewController: UIViewController, GADFullScreenContentDelegate {
     private let settingsButton = UIButton()
     private let tableView = UITableView()
     private let titleImageView = UIImageView()
-    private let tableHeader = TableHeaderView(frame: CGRect(x: 0, y: 0, width: 0, height: 140))
+    private let tableHeader = TableHeaderView(frame: CGRect(x: 0, y: 0, width: 0, height: 50))
 
     //MARK: - AdMob
 
     private var interstitial: GADInterstitialAd?
-    private var bannerView: GADBannerView!
 
     //MARK: - Lyfe cycle
 
@@ -39,7 +38,8 @@ class MainViewController: UIViewController, GADFullScreenContentDelegate {
         detailsTableView()
 
         setupAdMob()
-        addBannerViewToView()
+
+        tableHeader.bannerView.rootViewController = self
     }
 
     //MARK: - Private methods
@@ -57,6 +57,7 @@ class MainViewController: UIViewController, GADFullScreenContentDelegate {
         view.addSubview(settingsButton)
         settingsButton.setImage(UIImage(systemName: "gearshape"), for: .normal)
         settingsButton.tintColor = Colors.DarkGrayColor
+        settingsButton.addTarget(self, action: #selector(settingsButtonAction), for: .touchUpInside)
 
         view.addSubview(tableView)
         tableView.separatorStyle = .none
@@ -105,50 +106,38 @@ class MainViewController: UIViewController, GADFullScreenContentDelegate {
             forCellReuseIdentifier: BataCollectionView.ID)
     }
 
-    func doSomething(_ sender: Any) {
-        if interstitial != nil {
-            interstitial!.present(fromRootViewController: self)
-        } else {
-            print("Ad wasn't ready")
-        }
-    }
-
     //MARK: - Setup AdMob
 
     private func setupAdMob() {
         let request = GADRequest()
 
-        GADInterstitialAd.load(
-            withAdUnitID: themeTappedKey,
-            request: request,
-            completionHandler: { [self] ad, error in
+        DispatchQueue.main.async {
+            GADInterstitialAd.load(
+                withAdUnitID: interstitialBanner,
+                request: request,
+                completionHandler: { [self] ad, error in
 
-                if let error = error {
-                    print("Failed to load interstitial ad with error: \(error.localizedDescription)")
-                    return
+                    if let error = error {
+                        print("Failed to load interstitial ad with error: \(error.localizedDescription)")
+                        return
+                    }
+
+                    interstitial = ad
+                    interstitial?.fullScreenContentDelegate = self
                 }
-
-                interstitial = ad
-                interstitial?.fullScreenContentDelegate = self
-            }
-        )
+            )
+        }
     }
 
-    private func addBannerViewToView() {
-        bannerView = GADBannerView(adSize: GADAdSizeBanner)
-        bannerView.adUnitID = bannerKey
-        bannerView.rootViewController = self
-        bannerView.load(GADRequest())
+    func adDidDismissFullScreenContent(_ ad: GADFullScreenPresentingAd) {
+        setupAdMob()
+    }
 
-        view.addSubview(bannerView)
-        bannerView.backgroundColor = .clear
+    //MARK: - Button action
 
-        bannerView.snp.makeConstraints { make in
-            make.bottom.equalToSuperview().offset(-16)
-            make.centerX.equalToSuperview()
-            make.height.equalTo(50)
-            make.width.equalTo(320)
-        }
+    @objc func settingsButtonAction() {
+        let settingsVC = SettingsViewController()
+        navigationController?.pushViewController(settingsVC, animated: true)
     }
 }
 
@@ -178,7 +167,6 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
                     print("Ad wasn't ready")
                 }
 
-
                 let maqal = maqalDatabase[indexPath.row]
                 let maqalVC = MaqalViewController(maqal: maqal, title: maqal.themeTitle)
                 self?.navigationController?.pushViewController(maqalVC, animated: true)
@@ -196,7 +184,13 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
 
             cell.selectionStyle = .none
 
-            cell.bataClosure = { [weak self] indexPath in
+            cell.goTobataVC = { [weak self] indexPath in
+
+                if let interstitial = self?.interstitial {
+                    interstitial.present(fromRootViewController: self!)
+                } else {
+                    print("Ad wasn't ready")
+                }
 
                 let bata = bataDataBase[indexPath.row]
                 let bataVC = BataViewController(bata: bata, title: bata.title)
@@ -251,7 +245,6 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
             return 30
         case 1:
             return 30
-
         default:
             return 10
         }

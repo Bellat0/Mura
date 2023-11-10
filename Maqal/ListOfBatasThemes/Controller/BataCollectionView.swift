@@ -26,7 +26,7 @@ class BataCollectionView: UITableViewCell {
 
     // MARK: - Closures
 
-    var bataClosure: ((IndexPath) -> Void)?
+    var goTobataVC: ((IndexPath) -> Void)?
 
     //MARK: - View lifecycle
 
@@ -114,7 +114,7 @@ extension BataCollectionView: UICollectionViewDataSource, UICollectionViewDelega
     // MARK: - didSelect
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        bataClosure?(indexPath)
+        goTobataVC?(indexPath)
     }
 }
 

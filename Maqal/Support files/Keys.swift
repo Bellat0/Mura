@@ -7,5 +7,5 @@
 
 import Foundation
 
-let themeTappedKey = "ca-app-pub-9253109572418258/4297300281"
-let bannerKey = "ca-app-pub-9253109572418258/8700413879"
+let interstitialBanner = "ca-app-pub-9253109572418258/4297300281"
+let bannerAd = "ca-app-pub-9253109572418258/7885569776"

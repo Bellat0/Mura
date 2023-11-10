@@ -9,11 +9,25 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
+    // MARK: - Private properties
+
+    private let tableView = UITableView()
+
+    // MARK: - Внешние зависимости
+
+    // MARK: - View lifecycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = "Settings"
+        title = "Настройки"
+
+        view.backgroundColor = .red
     }
+
+
+    // MARK: - Private methods
+
 
 
 }

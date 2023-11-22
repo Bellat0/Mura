@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		942825E52B0C9FEB000898A6 /* Calculations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942825E42B0C9FEB000898A6 /* Calculations.swift */; };
-		943F0E732B0759A100D9E4DC /* SubscriptionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943F0E722B0759A100D9E4DC /* SubscriptionService.swift */; };
 		9442096D2AD7F00F00D262FB /* BataDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9442096C2AD7F00F00D262FB /* BataDataBase.swift */; };
 		944209702AD7F28000D262FB /* BataThemesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9442096F2AD7F28000D262FB /* BataThemesModel.swift */; };
 		944209722AD80DE600D262FB /* BataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944209712AD80DE600D262FB /* BataModel.swift */; };
@@ -37,12 +36,10 @@
 		9491BE372AD9CDB3005AB5C6 /* TildaSans-VF.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9491BE362AD9CDB3005AB5C6 /* TildaSans-VF.ttf */; };
 		94988E062AD41BAF0012E783 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = 94988E052AD41BAF0012E783 /* GoogleMobileAds */; };
 		94988E0A2AD537220012E783 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94988E092AD537220012E783 /* Keys.swift */; };
-		94CEE7812AE029F9007D691D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CEE7802AE029F9007D691D /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		942825E42B0C9FEB000898A6 /* Calculations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculations.swift; sourceTree = "<group>"; };
-		943F0E722B0759A100D9E4DC /* SubscriptionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionService.swift; sourceTree = "<group>"; };
 		9442096C2AD7F00F00D262FB /* BataDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BataDataBase.swift; sourceTree = "<group>"; };
 		9442096F2AD7F28000D262FB /* BataThemesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BataThemesModel.swift; sourceTree = "<group>"; };
 		944209712AD80DE600D262FB /* BataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BataModel.swift; sourceTree = "<group>"; };
@@ -71,7 +68,6 @@
 		9471735F2AFE376E0071F2B6 /* TableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableHeaderView.swift; sourceTree = "<group>"; };
 		9491BE362AD9CDB3005AB5C6 /* TildaSans-VF.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TildaSans-VF.ttf"; sourceTree = "<group>"; };
 		94988E092AD537220012E783 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
-		94CEE7802AE029F9007D691D /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,11 +128,9 @@
 		945D83062A9C8323007DAB75 /* Mura */ = {
 			isa = PBXGroup;
 			children = (
-				943F0E722B0759A100D9E4DC /* SubscriptionService.swift */,
 				945D83342A9CA7BE007DAB75 /* MaqalDataBase.swift */,
 				9442096C2AD7F00F00D262FB /* BataDataBase.swift */,
 				94B68BF32B0B723500341B34 /* MainScreen */,
-				94B68BF02B0B6FE600341B34 /* SettingsViewController */,
 				94B68BE72B0B6E7600341B34 /* SearchViewController */,
 				945D83412A9DEBB8007DAB75 /* DetailsMaqalAndBata */,
 				945D831D2A9C866E007DAB75 /* Supporting files */,
@@ -258,22 +252,6 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
-		94B68BF02B0B6FE600341B34 /* SettingsViewController */ = {
-			isa = PBXGroup;
-			children = (
-				94B68BF22B0B6FFD00341B34 /* Controller */,
-			);
-			path = SettingsViewController;
-			sourceTree = "<group>";
-		};
-		94B68BF22B0B6FFD00341B34 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				94CEE7802AE029F9007D691D /* SettingsViewController.swift */,
-			);
-			name = Controller;
-			sourceTree = "<group>";
-		};
 		94B68BF32B0B723500341B34 /* MainScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -369,7 +347,6 @@
 				945D83082A9C8323007DAB75 /* AppDelegate.swift in Sources */,
 				945D830A2A9C8323007DAB75 /* SceneDelegate.swift in Sources */,
 				945D834A2A9DF27F007DAB75 /* MaqalModel.swift in Sources */,
-				943F0E732B0759A100D9E4DC /* SubscriptionService.swift in Sources */,
 				944209792AD80F5300D262FB /* BataCell.swift in Sources */,
 				945D832B2A9C8C18007DAB75 /* TableViewHeaderSection.swift in Sources */,
 				9445F6112ACADCF500428550 /* BatasCell.swift in Sources */,
@@ -388,7 +365,6 @@
 				944209772AD80EF900D262FB /* BataViewController.swift in Sources */,
 				945D83322A9CA688007DAB75 /* ThemeModel.swift in Sources */,
 				942825E52B0C9FEB000898A6 /* Calculations.swift in Sources */,
-				94CEE7812AE029F9007D691D /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

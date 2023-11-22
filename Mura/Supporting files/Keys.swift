@@ -7,5 +7,4 @@
 
 import Foundation
 
-let interstitialBannerAd = "ca-app-pub-9253109572418258/4297300281"
 let bannerAd = "ca-app-pub-9253109572418258/7885569776"

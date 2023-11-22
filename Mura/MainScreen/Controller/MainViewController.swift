@@ -19,12 +19,6 @@ class MainViewController: UIViewController {
 
     private let tableHeader = TableHeaderView(frame: CGRect(x: 0, y: 0, width: 0, height: 50))
 
-    private var interstitial: GADInterstitialAd?
-
-    // MARK: - Dependencies
-
-    private var subscriptionService = SubscriptionService()
-
     // MARK: - Lifecycle
 
     override func viewDidLoad() {
@@ -35,8 +29,6 @@ class MainViewController: UIViewController {
         setupViews()
         setupConstraints()
         setupTableView()
-
-        setupAdMob()
     }
 
     // MARK: - Methods
@@ -97,37 +89,6 @@ class MainViewController: UIViewController {
             BatasCell.self,
             forCellReuseIdentifier: BatasCell.ID)
     }
-
-    // MARK: - Setup AdMob
-
-    private func setupAdMob() {
-        let request = GADRequest()
-
-        DispatchQueue.main.async {
-            GADInterstitialAd.load(
-                withAdUnitID: interstitialBannerAd,
-                request: request,
-                completionHandler: { [self] ad, error in
-
-                    if let error = error {
-                        print("Failed to load interstitial ad with error: \(error.localizedDescription)")
-                        return
-                    }
-
-                    interstitial = ad
-                    interstitial?.fullScreenContentDelegate = self
-                }
-            )
-        }
-    }
-
-    func addInterstitialAd() {
-        if let interstitial = self.interstitial {
-            interstitial.present(fromRootViewController: self)
-        } else {
-            print("Ad wasn't ready")
-        }
-    }
 }
 
 // MARK: - Table view data source
@@ -150,13 +111,6 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
 
             cell.themeSelectionHandler = { [weak self] indexPath in
 
-                // #warning восстановить покупки после удаления прилы
-                // проверять активна ли подписка
-
-                if self?.subscriptionService.isPurchased == true {
-                    self?.addInterstitialAd()
-                }
-
                 let maqal = maqalDatabase[indexPath.row]
                 let maqalVC = MaqalViewController(maqal: maqal, title: maqal.themeTitle)
                 self?.navigationController?.pushViewController(maqalVC, animated: true)
@@ -175,8 +129,6 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
             cell.selectionStyle = .none
 
             cell.bataSelectionHandler = { [weak self] indexPath in
-
-                self?.addInterstitialAd()
 
                 let bata = bataDataBase[indexPath.row]
                 let bataVC = BataViewController(bata: bata, title: bata.title)
@@ -250,11 +202,3 @@ extension MainViewController: UISearchBarDelegate {
     }
 }
 
-// MARK: - AdMob repeat
-
-extension MainViewController: GADFullScreenContentDelegate {
-
-    func adDidDismissFullScreenContent(_ ad: GADFullScreenPresentingAd) {
-        setupAdMob()
-    }
-}

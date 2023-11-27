@@ -11,11 +11,11 @@ class BataCell: UITableViewCell {
 
     static let ID = "BataCell"
 
-    //MARK: - Private properties
+    // MARK: - Propertiese
 
     private let titleLabel = UILabel()
 
-    //MARK: - Lyfe cycle
+    //MARK: - Lifecycle
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -28,13 +28,12 @@ class BataCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
-    //MARK: - Private methods
+    // MARK: - Methods
 
     private func setupViews() {
         contentView.addSubview(titleLabel)
         titleLabel.textColor = Colors.DarkGrayColor
-        titleLabel.font = UIFont(name: "Helvetica Neue", size: 18)
-//        titleLabel.font = UIFont.boldSystemFont(ofSize: 18)
+        titleLabel.font = UIFont.systemFont(ofSize: 18)
         titleLabel.numberOfLines = 0
         titleLabel.textAlignment = .center
     }
@@ -48,7 +47,7 @@ class BataCell: UITableViewCell {
         }
     }
 
-    //MARK: - Configure methods
+    // MARK: - Configure
 
     func configureCell(bata: BataModel) {
         self.titleLabel.text = bata.title

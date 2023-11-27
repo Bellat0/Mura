@@ -34,13 +34,13 @@ class MaqalCell: UITableViewCell {
     private func setupViews() {
         contentView.addSubview(titleLabel)
         titleLabel.textColor = Colors.DarkGrayColor
-        titleLabel.font = UIFont(name: "Helvetica Neue", size: 18)
+        titleLabel.font = UIFont.systemFont(ofSize: 18)
         titleLabel.font = UIFont.boldSystemFont(ofSize: 18)
         titleLabel.numberOfLines = 0
 
         contentView.addSubview(descriptionLabel)
         descriptionLabel.textColor = Colors.GrayColor
-        descriptionLabel.font = UIFont(name: "Helvetica Neue", size: 16)
+        descriptionLabel.font = UIFont.systemFont(ofSize: 18)
         descriptionLabel.numberOfLines = 0
     }
 
@@ -62,6 +62,11 @@ class MaqalCell: UITableViewCell {
     //MARK: - Configure methods
 
     func configureCell(data: Maqal) {
+        self.titleLabel.text = data.title
+        self.descriptionLabel.text = data.translate
+    }
+
+    func configureKaraSozderi(data: Maqal) {
         self.titleLabel.text = data.title
         self.descriptionLabel.text = data.translate
     }

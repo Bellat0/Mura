@@ -43,10 +43,6 @@ var maqalDatabase = [
                 translate: "Железо испытывается в огне, а человек — в трудных временах",
                 isFavourite: false),
             Maqal(
-                title: "Адамның, куні адаммен",
-                translate: "Жизнь людей неполна друг без друга",
-                isFavourite: false),
-            Maqal(
                 title: "Ат жақсысын мақта, адам жақсысын жақта",
                 translate: "Прояви признательность к прекрасному коню и поддержи благородного человека",
                 isFavourite: false),

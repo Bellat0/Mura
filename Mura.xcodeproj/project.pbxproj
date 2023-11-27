@@ -26,7 +26,7 @@
 		945D83292A9C8A3F007DAB75 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 945D83282A9C8A3F007DAB75 /* SnapKit */; };
 		945D832B2A9C8C18007DAB75 /* TableViewHeaderSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D832A2A9C8C18007DAB75 /* TableViewHeaderSection.swift */; };
 		945D832E2A9C9BCE007DAB75 /* ThemesOfMaqalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D832D2A9C9BCE007DAB75 /* ThemesOfMaqalCell.swift */; };
-		945D83322A9CA688007DAB75 /* ThemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D83312A9CA688007DAB75 /* ThemeModel.swift */; };
+		945D83322A9CA688007DAB75 /* MaqalThemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D83312A9CA688007DAB75 /* MaqalThemeModel.swift */; };
 		945D83352A9CA7BE007DAB75 /* MaqalDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D83342A9CA7BE007DAB75 /* MaqalDataBase.swift */; };
 		945D83432A9DF101007DAB75 /* MaqalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D83422A9DF101007DAB75 /* MaqalViewController.swift */; };
 		945D83472A9DF1E2007DAB75 /* MaqalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945D83462A9DF1E2007DAB75 /* MaqalCell.swift */; };
@@ -36,6 +36,10 @@
 		9491BE372AD9CDB3005AB5C6 /* TildaSans-VF.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9491BE362AD9CDB3005AB5C6 /* TildaSans-VF.ttf */; };
 		94988E062AD41BAF0012E783 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = 94988E052AD41BAF0012E783 /* GoogleMobileAds */; };
 		94988E0A2AD537220012E783 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94988E092AD537220012E783 /* Keys.swift */; };
+		94BD55912B14837E006D2F7C /* KaraSozderiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BD55902B14837E006D2F7C /* KaraSozderiCell.swift */; };
+		94BD55932B148463006D2F7C /* ThemesOfKaraSozderiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BD55922B148463006D2F7C /* ThemesOfKaraSozderiCell.swift */; };
+		94BD55952B14866E006D2F7C /* KaraSozderiDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BD55942B14866E006D2F7C /* KaraSozderiDataBase.swift */; };
+		94BD55972B148F40006D2F7C /* KaraSozderiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BD55962B148F40006D2F7C /* KaraSozderiViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,7 +63,7 @@
 		945D83232A9C8A07007DAB75 /* MaqalsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaqalsCell.swift; sourceTree = "<group>"; };
 		945D832A2A9C8C18007DAB75 /* TableViewHeaderSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewHeaderSection.swift; sourceTree = "<group>"; };
 		945D832D2A9C9BCE007DAB75 /* ThemesOfMaqalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemesOfMaqalCell.swift; sourceTree = "<group>"; };
-		945D83312A9CA688007DAB75 /* ThemeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeModel.swift; sourceTree = "<group>"; };
+		945D83312A9CA688007DAB75 /* MaqalThemeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaqalThemeModel.swift; sourceTree = "<group>"; };
 		945D83342A9CA7BE007DAB75 /* MaqalDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaqalDataBase.swift; sourceTree = "<group>"; };
 		945D83422A9DF101007DAB75 /* MaqalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaqalViewController.swift; sourceTree = "<group>"; };
 		945D83462A9DF1E2007DAB75 /* MaqalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaqalCell.swift; sourceTree = "<group>"; };
@@ -68,6 +72,10 @@
 		9471735F2AFE376E0071F2B6 /* TableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableHeaderView.swift; sourceTree = "<group>"; };
 		9491BE362AD9CDB3005AB5C6 /* TildaSans-VF.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TildaSans-VF.ttf"; sourceTree = "<group>"; };
 		94988E092AD537220012E783 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		94BD55902B14837E006D2F7C /* KaraSozderiCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaraSozderiCell.swift; sourceTree = "<group>"; };
+		94BD55922B148463006D2F7C /* ThemesOfKaraSozderiCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemesOfKaraSozderiCell.swift; sourceTree = "<group>"; };
+		94BD55942B14866E006D2F7C /* KaraSozderiDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaraSozderiDataBase.swift; sourceTree = "<group>"; };
+		94BD55962B148F40006D2F7C /* KaraSozderiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KaraSozderiViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,9 +138,10 @@
 			children = (
 				945D83342A9CA7BE007DAB75 /* MaqalDataBase.swift */,
 				9442096C2AD7F00F00D262FB /* BataDataBase.swift */,
+				94BD55942B14866E006D2F7C /* KaraSozderiDataBase.swift */,
 				94B68BF32B0B723500341B34 /* MainScreen */,
 				94B68BE72B0B6E7600341B34 /* SearchViewController */,
-				945D83412A9DEBB8007DAB75 /* DetailsMaqalAndBata */,
+				945D83412A9DEBB8007DAB75 /* DetailsOfThemes */,
 				945D831D2A9C866E007DAB75 /* Supporting files */,
 			);
 			path = Mura;
@@ -141,9 +150,9 @@
 		945D831D2A9C866E007DAB75 /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
+				945D831E2A9C889D007DAB75 /* Constants.swift */,
 				945D83122A9C8323007DAB75 /* LaunchScreen.storyboard */,
 				9491BE352AD9CDA6005AB5C6 /* Fonts */,
-				945D831E2A9C889D007DAB75 /* Constants.swift */,
 				942825E42B0C9FEB000898A6 /* Calculations.swift */,
 				94988E092AD537220012E783 /* Keys.swift */,
 				945D83072A9C8323007DAB75 /* AppDelegate.swift */,
@@ -169,6 +178,7 @@
 				945D832A2A9C8C18007DAB75 /* TableViewHeaderSection.swift */,
 				9445F60E2ACADBB100428550 /* ThemesOfMaqal */,
 				9445F60F2ACADCD700428550 /* ThemesOfBata */,
+				94BD558E2B148322006D2F7C /* ThemesOfAbayKaraSozderi */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -185,20 +195,20 @@
 		945D83302A9CA676007DAB75 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				945D83312A9CA688007DAB75 /* ThemeModel.swift */,
+				945D83312A9CA688007DAB75 /* MaqalThemeModel.swift */,
 				9442096F2AD7F28000D262FB /* BataThemesModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		945D83412A9DEBB8007DAB75 /* DetailsMaqalAndBata */ = {
+		945D83412A9DEBB8007DAB75 /* DetailsOfThemes */ = {
 			isa = PBXGroup;
 			children = (
 				945D83482A9DF275007DAB75 /* Model */,
 				945D83442A9DF1CA007DAB75 /* Controller */,
 				945D83452A9DF1D1007DAB75 /* View */,
 			);
-			path = DetailsMaqalAndBata;
+			path = DetailsOfThemes;
 			sourceTree = "<group>";
 		};
 		945D83442A9DF1CA007DAB75 /* Controller */ = {
@@ -206,6 +216,7 @@
 			children = (
 				945D83422A9DF101007DAB75 /* MaqalViewController.swift */,
 				944209762AD80EF900D262FB /* BataViewController.swift */,
+				94BD55962B148F40006D2F7C /* KaraSozderiViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -260,6 +271,23 @@
 				945D83212A9C89C1007DAB75 /* View */,
 			);
 			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		94BD558E2B148322006D2F7C /* ThemesOfAbayKaraSozderi */ = {
+			isa = PBXGroup;
+			children = (
+				94BD558F2B14836A006D2F7C /* View */,
+			);
+			path = ThemesOfAbayKaraSozderi;
+			sourceTree = "<group>";
+		};
+		94BD558F2B14836A006D2F7C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				94BD55902B14837E006D2F7C /* KaraSozderiCell.swift */,
+				94BD55922B148463006D2F7C /* ThemesOfKaraSozderiCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,13 +371,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				945D830C2A9C8323007DAB75 /* MainViewController.swift in Sources */,
+				94BD55932B148463006D2F7C /* ThemesOfKaraSozderiCell.swift in Sources */,
 				94988E0A2AD537220012E783 /* Keys.swift in Sources */,
 				945D83082A9C8323007DAB75 /* AppDelegate.swift in Sources */,
+				94BD55952B14866E006D2F7C /* KaraSozderiDataBase.swift in Sources */,
 				945D830A2A9C8323007DAB75 /* SceneDelegate.swift in Sources */,
 				945D834A2A9DF27F007DAB75 /* MaqalModel.swift in Sources */,
 				944209792AD80F5300D262FB /* BataCell.swift in Sources */,
 				945D832B2A9C8C18007DAB75 /* TableViewHeaderSection.swift in Sources */,
 				9445F6112ACADCF500428550 /* BatasCell.swift in Sources */,
+				94BD55912B14837E006D2F7C /* KaraSozderiCell.swift in Sources */,
 				945D83352A9CA7BE007DAB75 /* MaqalDataBase.swift in Sources */,
 				945D83472A9DF1E2007DAB75 /* MaqalCell.swift in Sources */,
 				944209722AD80DE600D262FB /* BataModel.swift in Sources */,
@@ -358,12 +389,13 @@
 				945D83432A9DF101007DAB75 /* MaqalViewController.swift in Sources */,
 				945D834E2A9E02C5007DAB75 /* SearchViewController.swift in Sources */,
 				945D832E2A9C9BCE007DAB75 /* ThemesOfMaqalCell.swift in Sources */,
+				94BD55972B148F40006D2F7C /* KaraSozderiViewController.swift in Sources */,
 				944209702AD7F28000D262FB /* BataThemesModel.swift in Sources */,
 				945D831F2A9C889D007DAB75 /* Constants.swift in Sources */,
 				9442096D2AD7F00F00D262FB /* BataDataBase.swift in Sources */,
 				945D83252A9C8A07007DAB75 /* MaqalsCell.swift in Sources */,
 				944209772AD80EF900D262FB /* BataViewController.swift in Sources */,
-				945D83322A9CA688007DAB75 /* ThemeModel.swift in Sources */,
+				945D83322A9CA688007DAB75 /* MaqalThemeModel.swift in Sources */,
 				942825E52B0C9FEB000898A6 /* Calculations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -504,13 +536,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 1.0;
 				DEVELOPMENT_TEAM = J8L5S42HGH;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Mura/Supporting files/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = Mura;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
@@ -519,7 +552,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = maqal.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -528,7 +561,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -538,13 +571,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 1.0;
 				DEVELOPMENT_TEAM = J8L5S42HGH;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Mura/Supporting files/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = Mura;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
@@ -553,7 +587,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = maqal.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -562,7 +596,7 @@
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

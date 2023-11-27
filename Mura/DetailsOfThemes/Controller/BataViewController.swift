@@ -9,13 +9,13 @@ import UIKit
 
 class BataViewController: UIViewController {
 
-    //MARK: - Private properties
+    // MARK: - Properties
 
-    private let tableView = UITableView(frame: .zero, style: .grouped)
+    private let tableView = UITableView()
     private var bata: BataThemesModel
     private var titleHeader: String
 
-    //MARK: - Lyfe cycle
+    // MARK: - Init
 
     init(bata: BataThemesModel, title: String) {
         self.bata = bata
@@ -41,7 +41,7 @@ class BataViewController: UIViewController {
     }
 
 
-    //MARK: - Private methods
+    // MARK: - Methods
 
     private func setupViews() {
         view.addSubview(tableView)

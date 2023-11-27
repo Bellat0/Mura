@@ -88,6 +88,10 @@ class MainViewController: UIViewController {
         tableView.register(
             BatasCell.self,
             forCellReuseIdentifier: BatasCell.ID)
+
+        tableView.register(
+            KaraSozderiCell.self,
+            forCellReuseIdentifier: KaraSozderiCell.ID)
     }
 }
 
@@ -95,7 +99,7 @@ class MainViewController: UIViewController {
 
 extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 3
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -139,6 +143,22 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
 
             return cell
 
+        } else if indexPath.section == 2 {
+            guard let cell = tableView.dequeueReusableCell(
+                withIdentifier: KaraSozderiCell.ID,
+                for: indexPath
+            ) as? KaraSozderiCell else { return UITableViewCell() }
+
+            cell.themeSelectionHandler = { [weak self] indexPath in
+
+                let karaSozderi = karaSozderiDataBase[indexPath.row]
+                let karaSozderiVC = KaraSozderiViewController(karaSozderi: karaSozderi, title: karaSozderi.themeTitle)
+                self?.navigationController?.pushViewController(karaSozderiVC, animated: true)
+            }
+
+            cell.selectionStyle = .none
+            
+            return cell
         }
 
         return UITableViewCell()
@@ -156,6 +176,8 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
             headerView.configureTitle(title: "Пословицы")
         case 1:
             headerView.configureTitle(title: "Бата")
+        case 2:
+            headerView.configureTitle(title: "Абайдың қара сөздері")
         default:
             break
         }
@@ -180,6 +202,8 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
             return 455
         case 1:
             return 260
+        case 2:
+            return 455
         default:
             return 100
         }

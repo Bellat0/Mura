@@ -106,7 +106,6 @@ extension KaraSozderiCell: UICollectionViewDataSource, UICollectionViewDelegate 
         let data = karaSozderiDataBase[indexPath.row]
         cell.configure(data: data)
         
-
         return cell
     }
 
@@ -122,11 +121,9 @@ extension KaraSozderiCell: UICollectionViewDataSource, UICollectionViewDelegate 
 extension KaraSozderiCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 
-        let paddingWidth = 8 * (LayoutCollectionView.maqalItems + 1)
-        let availableWidth = collectionView.frame.width - paddingWidth
-        let itemWidth = availableWidth / LayoutCollectionView.maqalItems
+        let width = karaSozderiItemSize(indexPath: indexPath)
 
-        return CGSize(width: itemWidth + 8, height: 150)
+        return CGSize(width: width, height: 120)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {

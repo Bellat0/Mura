@@ -1,13 +1,14 @@
 //
-//  ThemeModel.swift
-//  Maqal
+//  KaraSozModel.swift
+//  Mura
 //
-//  Created by Maxim Tvilinev on 28.08.2023.
+//  Created by Maxim Tvilinev on 27.11.2023.
 //
 
 import Foundation
 
-struct Theme {
+struct KaraSozModel {
+    let number: String
     let image: String
     let themeTitle: String
     let themeTranslate: String

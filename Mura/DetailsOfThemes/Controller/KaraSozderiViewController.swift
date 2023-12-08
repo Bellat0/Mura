@@ -12,13 +12,16 @@ class KaraSozderiViewController: UIViewController {
     // MARK: - Properties
 
     private let tableView = UITableView()
-    private var karaSozderi: Theme
     private var titleHeader: String
+
+    // MARK: -  Dependencies
+
+    private var karaSoz: KaraSozModel
 
     // MARK: - Init
 
-    init(karaSozderi: Theme, title: String) {
-        self.karaSozderi = karaSozderi
+    init(karaSozderi: KaraSozModel, title: String) {
+        self.karaSoz = karaSozderi
         self.titleHeader = title
 
         super.init(nibName: nil, bundle: nil)
@@ -67,7 +70,7 @@ class KaraSozderiViewController: UIViewController {
 
 extension KaraSozderiViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return karaSozderi.maqals.count
+        return karaSoz.maqals.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -76,10 +79,10 @@ extension KaraSozderiViewController: UITableViewDelegate, UITableViewDataSource 
             for: indexPath
         ) as? MaqalCell else { return UITableViewCell() }
 
-        let karaSozderi = karaSozderi.maqals[indexPath.row]
-        cell.configureKaraSozderi(data: karaSozderi)
-
         cell.selectionStyle = .none
+
+        let karaSoz = karaSoz.maqals[indexPath.row]
+        cell.configureKaraSozderi(data: karaSoz)
 
         return cell
     }

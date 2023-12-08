@@ -23,12 +23,29 @@
                                     <constraint firstAttribute="height" constant="125" id="Yu5-ix-Dy3"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Created by Maxim Tvilinev" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cE8-dg-BXm">
+                                <rect key="frame" x="111.66666666666669" y="748" width="170" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MyLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Z7z-u0-tcp">
+                                <rect key="frame" x="161.66666666666666" y="781" width="70" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="LNZ-vE-p7F"/>
+                                    <constraint firstAttribute="height" constant="21" id="txI-k8-Zt6"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="AB6-2L-nF3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="250" id="KcP-Qy-XAu"/>
+                            <constraint firstItem="cE8-dg-BXm" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="P1B-3g-S73"/>
+                            <constraint firstItem="Z7z-u0-tcp" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Q3y-tD-gKr"/>
+                            <constraint firstItem="Z7z-u0-tcp" firstAttribute="top" secondItem="cE8-dg-BXm" secondAttribute="bottom" constant="16" id="e14-iS-N34"/>
                             <constraint firstItem="AB6-2L-nF3" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="r8G-dG-PHj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Z7z-u0-tcp" secondAttribute="bottom" constant="16" id="ztQ-aH-fN9"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -39,5 +56,6 @@
     </scenes>
     <resources>
         <image name="LogoBG" width="1024" height="1024"/>
+        <image name="MyLogo" width="1135" height="400"/>
     </resources>
 </document>

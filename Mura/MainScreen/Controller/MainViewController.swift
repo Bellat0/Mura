@@ -19,6 +19,9 @@ class MainViewController: UIViewController {
 
     private let tableHeader = TableHeaderView(frame: CGRect(x: 0, y: 0, width: 0, height: 50))
 
+    let randomThemeIndex = Int.random(in: 0..<maqalDatabase.count)
+    let randomMaqalIndex = Int.random(in: 0..<maqalDatabase.first!.maqals.count)
+
     // MARK: - Lifecycle
 
     override func viewDidLoad() {
@@ -82,6 +85,10 @@ class MainViewController: UIViewController {
             forHeaderFooterViewReuseIdentifier: TableViewHeaderSection.ID)
 
         tableView.register(
+            RandomMaqalCell.self,
+            forCellReuseIdentifier: RandomMaqalCell.ID)
+
+        tableView.register(
             MaqalsCell.self,
             forCellReuseIdentifier: MaqalsCell.ID)
 
@@ -99,7 +106,7 @@ class MainViewController: UIViewController {
 
 extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return 4
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -107,7 +114,22 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
         if indexPath.section == 0 {
+
+            guard let cell = tableView.dequeueReusableCell(
+                withIdentifier: RandomMaqalCell.ID,
+                for: indexPath
+            ) as? RandomMaqalCell else { return UITableViewCell() }
+
+            let maqalData = maqalDatabase[randomThemeIndex].maqals[randomMaqalIndex]
+            cell.configure(maqalData: maqalData)
+            
+            cell.selectionStyle = .none
+
+            return cell
+
+        } else if indexPath.section == 1 {
             guard let cell = tableView.dequeueReusableCell(
                 withIdentifier: MaqalsCell.ID,
                 for: indexPath
@@ -124,7 +146,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
 
             return cell
 
-        } else if indexPath.section == 1 {
+        } else if indexPath.section == 2 {
             guard let cell = tableView.dequeueReusableCell(
                 withIdentifier: BatasCell.ID,
                 for: indexPath
@@ -143,7 +165,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
 
             return cell
 
-        } else if indexPath.section == 2 {
+        } else if indexPath.section == 3 {
             guard let cell = tableView.dequeueReusableCell(
                 withIdentifier: KaraSozderiCell.ID,
                 for: indexPath
@@ -157,7 +179,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
             }
 
             cell.selectionStyle = .none
-            
+
             return cell
         }
 
@@ -173,10 +195,12 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
 
         switch section {
         case 0:
-            headerView.configureTitle(title: "Пословицы")
+            headerView.configureTitle(title: "Cлучайная пословица")
         case 1:
-            headerView.configureTitle(title: "Бата")
+            headerView.configureTitle(title: "Пословицы")
         case 2:
+            headerView.configureTitle(title: "Бата")
+        case 3:
             headerView.configureTitle(title: "Абайдың қара сөздері")
         default:
             break
@@ -198,14 +222,16 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
 
         switch indexPath.section {
         case 0:
+            return randomMaqalCellHeight(indexPath: indexPath, randomThemeIndex: randomThemeIndex, randomMaqalIndex: randomMaqalIndex)
+        case 1:
             // TODO: в будущем сделать динамические размеры, вкл коллекцию
             return 455
-        case 1:
-            return 260
         case 2:
-            return 455
+            return 260
+        case 3:
+            return 255
         default:
-            return 100
+            return 250
         }
     }
 

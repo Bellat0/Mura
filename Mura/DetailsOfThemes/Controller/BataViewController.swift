@@ -12,9 +12,12 @@ class BataViewController: UIViewController {
     // MARK: - Properties
 
     private let tableView = UITableView()
-    private var bata: BataThemesModel
     private var titleHeader: String
 
+    // MARK: -  Dependencies
+    
+    private var bata: BataThemesModel
+    
     // MARK: - Init
 
     init(bata: BataThemesModel, title: String) {

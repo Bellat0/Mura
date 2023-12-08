@@ -35,7 +35,6 @@ class MaqalCell: UITableViewCell {
         contentView.addSubview(titleLabel)
         titleLabel.textColor = Colors.DarkGrayColor
         titleLabel.font = UIFont.systemFont(ofSize: 18)
-        titleLabel.font = UIFont.boldSystemFont(ofSize: 18)
         titleLabel.numberOfLines = 0
 
         contentView.addSubview(descriptionLabel)
@@ -62,6 +61,7 @@ class MaqalCell: UITableViewCell {
     //MARK: - Configure methods
 
     func configureCell(data: Maqal) {
+        titleLabel.font = UIFont.boldSystemFont(ofSize: 18)
         self.titleLabel.text = data.title
         self.descriptionLabel.text = data.translate
     }
